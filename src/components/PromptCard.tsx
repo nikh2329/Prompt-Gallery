@@ -52,17 +52,27 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+      {/* Image Preview Section */}
+      <div className="relative h-40 overflow-hidden bg-gradient-to-br from-secondary via-secondary/80 to-muted">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-center p-4">
+          <p className="line-clamp-4 text-center text-xs leading-relaxed text-foreground/70 italic">
+            "{prompt.image}"
+          </p>
+        </div>
+        <span
+          className={cn(
+            'absolute left-3 top-3 inline-flex rounded-full border px-2.5 py-0.5 text-xs font-medium capitalize backdrop-blur-sm',
+            categoryColors[prompt.category]
+          )}
+        >
+          {prompt.category}
+        </span>
+      </div>
+
       {/* Header */}
       <div className="flex items-start justify-between gap-3 p-5 pb-0">
         <div className="flex-1">
-          <span
-            className={cn(
-              'mb-3 inline-flex rounded-full border px-3 py-1 text-xs font-medium capitalize',
-              categoryColors[prompt.category]
-            )}
-          >
-            {prompt.category}
-          </span>
           <h3 className="text-lg font-semibold leading-snug text-foreground">
             {prompt.title}
           </h3>
