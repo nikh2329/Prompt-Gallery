@@ -21,7 +21,7 @@ const Header = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Categories', href: '#categories' },
-    { label: 'Favorites', href: '#' },
+    { label: 'Favorites', href: '/favorites' },
     { label: 'Submit', href: '#' },
   ];
 
