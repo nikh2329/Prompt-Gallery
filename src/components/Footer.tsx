@@ -1,95 +1,93 @@
-import { Sparkles, Github, Twitter } from 'lucide-react';
+import { Github, Twitter } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/40 bg-card/50">
+    <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="mb-4 inline-flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Sparkles className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">PromptVault</span>
+            <a href="#" className="mb-4 flex items-center gap-2">
+              <img src={logo} alt="PromptVault" className="h-9 w-9 rounded-lg" />
+              <span className="text-xl font-bold text-foreground">PromptVault</span>
             </a>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              The ultimate collection of AI prompts for creatives. Discover, copy, and generate stunning images with just one click.
+            <p className="mb-6 max-w-sm text-sm text-muted-foreground">
+              Discover and share the best AI prompts for image generation. Curated prompts for Midjourney, DALL·E, Stable Diffusion, and more.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="flex gap-4">
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition-colors hover:bg-secondary/80 hover:text-foreground"
+                className="glow-border flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-all hover:text-foreground"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition-colors hover:bg-secondary/80 hover:text-foreground"
+                className="glow-border flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-all hover:text-foreground"
               >
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Resources */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Resources</h4>
-            <ul className="space-y-3 text-sm">
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Resources</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Browse Prompts
+                <a href="#" className="transition-colors hover:text-primary">
+                  Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Categories
+                <a href="#" className="transition-colors hover:text-primary">
+                  API Reference
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Submit Prompt
+                <a href="#" className="transition-colors hover:text-primary">
+                  Prompt Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  API Access
+                <a href="#" className="transition-colors hover:text-primary">
+                  Blog
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Company</h4>
-            <ul className="space-y-3 text-sm">
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Company</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="#" className="transition-colors hover:text-primary">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Privacy
+                <a href="#" className="transition-colors hover:text-primary">
+                  Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Terms
+                <a href="#" className="transition-colors hover:text-primary">
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Contact
+                <a href="#" className="transition-colors hover:text-primary">
+                  Terms of Service
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border/40 pt-8">
-          <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} PromptVault. All rights reserved.
-          </p>
+        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} PromptVault. All rights reserved.</p>
         </div>
       </div>
     </footer>
