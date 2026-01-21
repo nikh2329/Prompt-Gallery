@@ -1,5 +1,3 @@
-console.log("SUPABASE URL:", import.meta.env.VITE_SUPABASE_URL);
-
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
