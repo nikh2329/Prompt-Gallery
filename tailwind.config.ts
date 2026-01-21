@@ -59,8 +59,9 @@ export default {
           women: "hsl(var(--category-women))",
           couple: "hsl(var(--category-couple))",
           kids: "hsl(var(--category-kids))",
-          landscapes: "hsl(var(--category-landscapes))",
-          scifi: "hsl(var(--category-scifi))",
+        },
+        favorite: {
+          DEFAULT: "hsl(var(--favorite))",
         },
       },
       borderRadius: {

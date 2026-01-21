@@ -44,8 +44,9 @@
     --category-women: 330 81% 60%;
     --category-couple: 280 67% 56%;
     --category-kids: 25 95% 53%;
-    --category-landscapes: 142 71% 45%;
-    --category-scifi: 199 89% 48%;
+
+    /* Favorite token */
+    --favorite: 0 84% 60%;
 
     /* Gradient tokens */
     --gradient-primary: linear-gradient(135deg, hsl(263, 70%, 58%) 0%, hsl(217, 91%, 60%) 100%);
