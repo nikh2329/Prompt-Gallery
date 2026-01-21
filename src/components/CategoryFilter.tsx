@@ -5,9 +5,7 @@ import {
   User, 
   Users, 
   Heart, 
-  Baby, 
-  Mountain, 
-  Rocket 
+  Baby
 } from 'lucide-react';
 import type { Category } from '@/lib/prompts';
 
@@ -22,8 +20,6 @@ const categories: { id: Category; label: string; icon: React.ReactNode }[] = [
   { id: 'women', label: 'Women', icon: <Users className="h-4 w-4" /> },
   { id: 'couple', label: 'Couple', icon: <Heart className="h-4 w-4" /> },
   { id: 'kids', label: 'Kids', icon: <Baby className="h-4 w-4" /> },
-  { id: 'landscapes', label: 'Landscapes', icon: <Mountain className="h-4 w-4" /> },
-  { id: 'scifi', label: 'Sci-Fi', icon: <Rocket className="h-4 w-4" /> },
 ];
 
 const CategoryFilter = ({ activeCategory, onCategoryChange }: CategoryFilterProps) => {
