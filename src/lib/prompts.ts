@@ -63,457 +63,177 @@ import prompt37 from '@/assets/prompts/prompt-37.jpg';
 import prompt38 from '@/assets/prompts/prompt-38.jpg';
 import prompt39 from '@/assets/prompts/prompt-39.jpg';
 import prompt40 from '@/assets/prompts/prompt-40.jpg';
+import prompt41 from '@/assets/prompts/prompt-41.jpg';
+import prompt42 from '@/assets/prompts/prompt-42.jpg';
+import prompt43 from '@/assets/prompts/prompt-43.jpg';
+import prompt44 from '@/assets/prompts/prompt-44.jpg';
+import prompt45 from '@/assets/prompts/prompt-45.jpg';
+import prompt46 from '@/assets/prompts/prompt-46.jpg';
+import prompt47 from '@/assets/prompts/prompt-47.jpg';
+import prompt48 from '@/assets/prompts/prompt-48.jpg';
+import prompt49 from '@/assets/prompts/prompt-49.jpg';
+import prompt50 from '@/assets/prompts/prompt-50.jpg';
+import prompt51 from '@/assets/prompts/prompt-51.jpg';
+import prompt52 from '@/assets/prompts/prompt-52.jpg';
+import prompt53 from '@/assets/prompts/prompt-53.jpg';
+import prompt54 from '@/assets/prompts/prompt-54.jpg';
+import prompt55 from '@/assets/prompts/prompt-55.jpg';
+import prompt56 from '@/assets/prompts/prompt-56.jpg';
+import prompt57 from '@/assets/prompts/prompt-57.jpg';
+import prompt58 from '@/assets/prompts/prompt-58.jpg';
+import prompt59 from '@/assets/prompts/prompt-59.jpg';
+import prompt60 from '@/assets/prompts/prompt-60.jpg';
+import prompt61 from '@/assets/prompts/prompt-61.jpg';
+import prompt62 from '@/assets/prompts/prompt-62.jpg';
+import prompt63 from '@/assets/prompts/prompt-63.jpg';
+import prompt64 from '@/assets/prompts/prompt-64.jpg';
+import prompt65 from '@/assets/prompts/prompt-65.jpg';
+import prompt66 from '@/assets/prompts/prompt-66.jpg';
+import prompt67 from '@/assets/prompts/prompt-67.jpg';
+import prompt68 from '@/assets/prompts/prompt-68.jpg';
+import prompt69 from '@/assets/prompts/prompt-69.jpg';
+import prompt70 from '@/assets/prompts/prompt-70.jpg';
+import prompt71 from '@/assets/prompts/prompt-71.jpg';
+import prompt72 from '@/assets/prompts/prompt-72.jpg';
+import prompt73 from '@/assets/prompts/prompt-73.jpg';
+import prompt74 from '@/assets/prompts/prompt-74.jpg';
+import prompt75 from '@/assets/prompts/prompt-75.jpg';
+import prompt76 from '@/assets/prompts/prompt-76.jpg';
+import prompt77 from '@/assets/prompts/prompt-77.jpg';
+import prompt78 from '@/assets/prompts/prompt-78.jpg';
+import prompt79 from '@/assets/prompts/prompt-79.jpg';
+import prompt80 from '@/assets/prompts/prompt-80.jpg';
+import prompt81 from '@/assets/prompts/prompt-81.jpg';
+import prompt82 from '@/assets/prompts/prompt-82.jpg';
+import prompt83 from '@/assets/prompts/prompt-83.jpg';
+import prompt84 from '@/assets/prompts/prompt-84.jpg';
+import prompt85 from '@/assets/prompts/prompt-85.jpg';
+import prompt86 from '@/assets/prompts/prompt-86.jpg';
+import prompt87 from '@/assets/prompts/prompt-87.jpg';
+import prompt88 from '@/assets/prompts/prompt-88.jpg';
+import prompt89 from '@/assets/prompts/prompt-89.jpg';
+import prompt90 from '@/assets/prompts/prompt-90.jpg';
+import prompt91 from '@/assets/prompts/prompt-91.jpg';
+import prompt92 from '@/assets/prompts/prompt-92.jpg';
+import prompt93 from '@/assets/prompts/prompt-93.jpg';
+import prompt94 from '@/assets/prompts/prompt-94.jpg';
+import prompt95 from '@/assets/prompts/prompt-95.jpg';
+import prompt96 from '@/assets/prompts/prompt-96.jpg';
+import prompt97 from '@/assets/prompts/prompt-97.jpg';
+import prompt98 from '@/assets/prompts/prompt-98.jpg';
+import prompt99 from '@/assets/prompts/prompt-99.jpg';
+import prompt100 from '@/assets/prompts/prompt-100.jpg';
 
 export const mockPrompts: Prompt[] = [
-  // ========== MEN ==========
-  {
-    id: '1',
-    title: 'Cinematic Portrait Master',
-    category: 'men',
-    content: 'A distinguished gentleman in his 40s, wearing a perfectly tailored charcoal wool suit, standing in a dimly lit whiskey bar. Dramatic Rembrandt lighting, shallow depth of field, shot on Hasselblad medium format camera, cinematic color grading with warm amber tones.',
-    image: 'A hyper-realistic cinematic editorial portrait of a distinguished gentleman in his 40s in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt1,
-    tags: ['portrait', 'cinematic', 'professional'],
-    upvotes: 342,
-    createdAt: '2024-01-15',
-  },
-  {
-    id: '2',
-    title: 'Urban Street Style',
-    category: 'men',
-    content: 'A young creative director leaning against graffiti-covered walls in Brooklyn. Wearing vintage denim jacket over a crisp white tee, raw street photography style. Overcast natural lighting, Fujifilm X-T4 film simulation, gritty urban aesthetic.',
-    image: 'A hyper-realistic cinematic editorial portrait of a young creative director in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt2,
-    tags: ['street', 'urban', 'casual'],
-    upvotes: 234,
-    createdAt: '2024-01-09',
-  },
-  {
-    id: '3',
-    title: 'The Modern Maverick',
-    category: 'men',
-    content: 'A candid, editorial-style portrait of a man in his late 30s with a salt-and-pepper beard, dressed in a textured cashmere sweater and a vintage Barbour jacket. He is leaning against a classic Land Rover Defender in the Scottish Highlands.',
-    image: 'A hyper-realistic cinematic editorial portrait of a man in his late 30s with a salt-and-pepper beard in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt3,
-    tags: ['old money', 'quiet luxury', 'editorial'],
-    upvotes: 567,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '4',
-    title: 'The Cyber-Tech Specialist',
-    category: 'men',
-    content: 'A hyper-realistic close-up portrait of a tech specialist in a futuristic 2040s setting. The man has short, undercut hair and a geometric facial tattoo that faintly glows blue.',
-    image: 'A hyper-realistic cinematic editorial portrait of a tech specialist in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt4,
-    tags: ['cyberpunk', 'techwear', 'futuristic'],
-    upvotes: 723,
-    createdAt: '2024-01-19',
-  },
-  {
-    id: '5',
-    title: 'The Noir Detective',
-    category: 'men',
-    content: 'A gritty, black and white film noir photograph of a private detective sitting in a smoke-filled office at night. Rain streaks heavily down the window behind him.',
-    image: 'A hyper-realistic cinematic editorial portrait of a noir detective in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt5,
-    tags: ['noir', 'vintage', 'cinematic'],
-    upvotes: 489,
-    createdAt: '2024-01-18',
-  },
-  {
-    id: '6',
-    title: 'The Last Samurai',
-    category: 'men',
-    content: 'An epic, wide-angle cinematic shot of a lone samurai warrior standing on a rocky cliff edge during a violent thunderstorm. He is armored in traditional Japanese O-yoroi armor.',
-    image: 'A hyper-realistic cinematic editorial portrait of a samurai warrior in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt6,
-    tags: ['samurai', 'action', 'cinematic'],
-    upvotes: 892,
-    createdAt: '2024-01-17',
-  },
-  {
-    id: '7',
-    title: 'The Arctic Explorer',
-    category: 'men',
-    content: 'A powerful wildlife photograph of an arctic explorer making eye contact with a massive polar bear across a patch of melting sea ice.',
-    image: 'A hyper-realistic cinematic editorial portrait of an arctic explorer in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt7,
-    tags: ['adventure', 'wildlife', 'exploration'],
-    upvotes: 634,
-    createdAt: '2024-01-16',
-  },
+  // ========== MEN (1-7 existing + 41-50 new) ==========
+  { id: '1', title: 'Cinematic Portrait Master', category: 'men', content: 'A distinguished gentleman in his 40s, wearing a perfectly tailored charcoal wool suit, standing in a dimly lit whiskey bar. Dramatic Rembrandt lighting, shallow depth of field, shot on Hasselblad medium format camera, cinematic color grading with warm amber tones.', image: '', imageSrc: prompt1, tags: ['portrait', 'cinematic', 'professional'], upvotes: 342, createdAt: '2024-01-15' },
+  { id: '2', title: 'Urban Street Style', category: 'men', content: 'A young creative director leaning against graffiti-covered walls in Brooklyn. Wearing vintage denim jacket over a crisp white tee, raw street photography style. Overcast natural lighting, Fujifilm X-T4 film simulation, gritty urban aesthetic.', image: '', imageSrc: prompt2, tags: ['street', 'urban', 'casual'], upvotes: 234, createdAt: '2024-01-09' },
+  { id: '3', title: 'The Modern Maverick', category: 'men', content: 'A candid, editorial-style portrait of a man in his late 30s with a salt-and-pepper beard, dressed in a textured cashmere sweater and a vintage Barbour jacket. He is leaning against a classic Land Rover Defender in the Scottish Highlands.', image: '', imageSrc: prompt3, tags: ['old money', 'quiet luxury', 'editorial'], upvotes: 567, createdAt: '2024-01-20' },
+  { id: '4', title: 'The Cyber-Tech Specialist', category: 'men', content: 'A hyper-realistic close-up portrait of a tech specialist in a futuristic 2040s setting. The man has short, undercut hair and a geometric facial tattoo that faintly glows blue.', image: '', imageSrc: prompt4, tags: ['cyberpunk', 'techwear', 'futuristic'], upvotes: 723, createdAt: '2024-01-19' },
+  { id: '5', title: 'The Noir Detective', category: 'men', content: 'A gritty, black and white film noir photograph of a private detective sitting in a smoke-filled office at night. Rain streaks heavily down the window behind him.', image: '', imageSrc: prompt5, tags: ['noir', 'vintage', 'cinematic'], upvotes: 489, createdAt: '2024-01-18' },
+  { id: '6', title: 'The Last Samurai', category: 'men', content: 'An epic, wide-angle cinematic shot of a lone samurai warrior standing on a rocky cliff edge during a violent thunderstorm. He is armored in traditional Japanese O-yoroi armor.', image: '', imageSrc: prompt6, tags: ['samurai', 'action', 'cinematic'], upvotes: 892, createdAt: '2024-01-17' },
+  { id: '7', title: 'The Arctic Explorer', category: 'men', content: 'A powerful wildlife photograph of an arctic explorer making eye contact with a massive polar bear across a patch of melting sea ice.', image: '', imageSrc: prompt7, tags: ['adventure', 'wildlife', 'exploration'], upvotes: 634, createdAt: '2024-01-16' },
+  { id: '41', title: 'The Modern Maverick', category: 'men', content: 'A candid, editorial-style portrait of a man in his late 30s with a salt-and-pepper beard, dressed in a textured cashmere sweater and a vintage Barbour jacket. He is leaning against a classic Land Rover Defender in the Scottish Highlands, with rolling hills and soft, overcast daylight creating a moody atmosphere. His expression is thoughtful and relaxed. The image should have a natural film grain texture, shallow depth of field, and an analog photography feel, capturing a sense of quiet luxury and rugged sophistication. Shot on Portra 400 film.', image: '', imageSrc: prompt41, tags: ['old money', 'quiet luxury', 'editorial'], upvotes: 856, createdAt: '2024-01-22' },
+  { id: '42', title: 'The Cyber-Tech Specialist', category: 'men', content: 'A hyper-realistic close-up portrait of a tech specialist in a futuristic 2040s setting. The man has short, undercut hair and a geometric facial tattoo that faintly glows blue. He wears a tactical techwear jacket with integrated LEDs and wiring visible. His eyes are focused on a transparent holographic data display hovering in front of him, casting a cool blue and purple light on his face. The background is a bustling, rain-slicked Tokyo street at night with neon signs reflecting on wet surfaces. 8K resolution, highly detailed textures on skin and fabric, cinematic lighting.', image: '', imageSrc: prompt42, tags: ['cyberpunk', 'high-detail', 'techwear'], upvotes: 1023, createdAt: '2024-01-21' },
+  { id: '43', title: 'The Urban Noir Detective', category: 'men', content: 'A gritty, black and white film noir photograph of a private detective sitting in a smoke-filled office at night. Rain streaks heavily down the window behind him, blurring neon city lights. He wears a rumpled trench coat and fedora, holding a lit cigarette. Dramatic chiaroscuro lighting from a desk lamp casts deep shadows across his weathered face. A half-empty bottle of whiskey and scattered case files are on the desk. The image has heavy film grain, high contrast, and the aesthetic of a 1940s crime thriller.', image: '', imageSrc: prompt43, tags: ['noir', 'vintage', 'cinematic'], upvotes: 789, createdAt: '2024-01-20' },
+  { id: '44', title: 'The Last Samurai', category: 'men', content: 'An epic, wide-angle cinematic shot of a lone samurai warrior standing on a rocky cliff edge during a violent thunderstorm. He is armored in traditional Japanese O-yoroi armor, ragged from battle, holding a katana bathed in lightning. Waves crash violently against the cliffs below. Dark, turbulent clouds fill the sky, pierced by jagged lightning bolts that illuminate the scene in flashes of blue and white light. The atmosphere is tense and powerful, with a desaturated, gritty color grade.', image: '', imageSrc: prompt44, tags: ['samurai', 'action', 'cinematic'], upvotes: 1156, createdAt: '2024-01-19' },
+  { id: '45', title: 'The Arctic Explorer', category: 'men', content: 'A powerful wildlife photograph of an arctic explorer making eye contact with a massive polar bear across a patch of melting sea ice. The explorer is bundled in red technical gear, holding a camera with a long lens. The polar bear is curious, sniffing the air. The backdrop is a dramatic glacier and a freezing, dark blue ocean under a cloudy sky. The photo captures the tension, respect, and harsh beauty of the arctic environment.', image: '', imageSrc: prompt45, tags: ['wildlife', 'adventure', 'arctic'], upvotes: 934, createdAt: '2024-01-18' },
+  { id: '46', title: 'The Retro-Futuristic Diner Patron', category: 'men', content: 'A stylized photo of a man in a retro-futuristic 1950s diner. He wears a leather jacket over a jumpsuit and a bubble helmet pushed back on his head, smiling. A chrome robot server on wheels offers him a glowing milkshake. Outside the large curved window, fin-tailed flying cars are parked at a drive-in. The architecture features raygun gothic designs and atomic age motifs. The color palette is pastel blues, pinks, and mint greens with polished chrome accents. The look is warm, nostalgic, like a faded Kodachrome photograph.', image: '', imageSrc: prompt46, tags: ['retro-futuristic', 'nostalgic', 'sci-fi'], upvotes: 678, createdAt: '2024-01-17' },
+  { id: '47', title: 'The High-Fashion Editorial', category: 'men', content: 'A high-fashion editorial photograph of a male model in a minimalist, brutalist concrete environment. He is wearing an oversized, avant-garde structured coat from a luxury designer, paired with wide-leg trousers and chunky boots. His pose is dynamic and angular. The lighting is stark and natural, creating strong graphic shadows. The overall aesthetic is clean, sharp, and modern, with a focus on the texture and form of the clothing and architecture.', image: '', imageSrc: prompt47, tags: ['high-fashion', 'editorial', 'luxury'], upvotes: 812, createdAt: '2024-01-16' },
+  { id: '48', title: 'The Bohemian Musician', category: 'men', content: 'A candid, warm photograph of a musician sitting on a worn velvet armchair in a sunlit, cluttered apartment, playing an acoustic guitar. He has long, wavy hair and a beard, wearing a patterned vintage shirt and corduroy pants. The room is filled with plants, old books, instruments, and bohemian textiles. Golden hour light streams through a large window, creating lens flare and a cozy, inviting atmosphere. The film grain is natural and prominent.', image: '', imageSrc: prompt48, tags: ['bohemian', 'indie', 'folk'], upvotes: 567, createdAt: '2024-01-15' },
+  { id: '49', title: 'The Futuristic Racer', category: 'men', content: 'An action shot of a futuristic motorcycle racer speeding on a glowing neon track in a cyberpunk city at night. He wears a sleek, armored racing suit with integrated light strips and a helmet with a mirrored visor reflecting the city lights. His bike is a hubless, electric superbike leaving a trail of light. The background is a blur of towering skyscrapers covered in holographic advertisements. The sense of speed is conveyed through motion blur and light streaks.', image: '', imageSrc: prompt49, tags: ['cyberpunk', 'sports', 'futuristic'], upvotes: 945, createdAt: '2024-01-14' },
+  { id: '50', title: 'The Dystopian Survivor', category: 'men', content: 'A gritty portrait of a male survivor in a post-apocalyptic wasteland. He wears a patched leather jacket, armored gloves, and a scarf covering his lower face. He carries a scavenged backpack and a modified rifle. His face is dirty and weathered, with a determined expression. He stands atop a pile of rubble, looking out over a ruined, desert city at sunset. The color palette is desaturated browns, oranges, and greys, with a harsh, dusty atmosphere.', image: '', imageSrc: prompt50, tags: ['post-apocalyptic', 'dystopian', 'survivor'], upvotes: 823, createdAt: '2024-01-13' },
 
-  // ========== WOMEN ==========
-  {
-    id: '8',
-    title: 'Ethereal Fashion Editorial',
-    category: 'women',
-    content: 'An elegant model wearing a flowing silk gown in dusty rose, standing in an abandoned baroque palace. Golden hour light streaming through tall arched windows.',
-    image: 'A hyper-realistic cinematic editorial portrait of an elegant model in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt8,
-    tags: ['fashion', 'editorial', 'elegant'],
-    upvotes: 528,
-    createdAt: '2024-01-14',
-  },
-  {
-    id: '9',
-    title: 'Minimalist Beauty Portrait',
-    category: 'women',
-    content: 'A close-up beauty portrait with flawless skin and natural makeup. Clean white studio background, soft butterfly lighting setup.',
-    image: 'A hyper-realistic cinematic editorial close-up portrait of a woman in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt9,
-    tags: ['beauty', 'minimalist', 'studio'],
-    upvotes: 445,
-    createdAt: '2024-01-08',
-  },
-  {
-    id: '10',
-    title: 'The Ethereal Goddess',
-    category: 'women',
-    content: 'A fantastical, dreamlike portrait of a woman with flowing, waist-length hair adorned with small, glowing bioluminescent flowers and crystals.',
-    image: 'A hyper-realistic cinematic editorial portrait of an ethereal goddess in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt10,
-    tags: ['fantasy', 'ethereal', 'magical'],
-    upvotes: 756,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '11',
-    title: 'The Urban Creative',
-    category: 'women',
-    content: 'A vibrant, candid street style photograph of a young woman with dyed copper-orange hair in a shag cut. She is laughing naturally while walking across a busy crosswalk.',
-    image: 'A hyper-realistic cinematic editorial portrait of a young creative woman in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt11,
-    tags: ['street style', 'gen z', 'candid'],
-    upvotes: 623,
-    createdAt: '2024-01-19',
-  },
-  {
-    id: '12',
-    title: 'Dark Academia Librarian',
-    category: 'women',
-    content: 'A moody, atmospheric portrait of a young historian in a dusty, candelabra-lit chamber of an ancient university library.',
-    image: 'A hyper-realistic cinematic editorial portrait of a young historian in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt12,
-    tags: ['dark academia', 'moody', 'vintage'],
-    upvotes: 534,
-    createdAt: '2024-01-18',
-  },
-  {
-    id: '13',
-    title: 'High-Fashion Futuristic Nomad',
-    category: 'women',
-    content: 'A striking, high-fashion editorial shot of a nomadic model in a desert landscape at sunset. She wears avant-garde clothing made of layered deconstructed fabrics.',
-    image: 'A hyper-realistic cinematic editorial portrait of a futuristic nomadic model in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt13,
-    tags: ['high fashion', 'editorial', 'avant-garde'],
-    upvotes: 678,
-    createdAt: '2024-01-17',
-  },
-  {
-    id: '14',
-    title: 'Post-Apocalyptic Survivor',
-    category: 'women',
-    content: 'A gritty, close-up portrait of a female survivor in a post-apocalyptic wasteland. Her face is smudged with dirt and grease.',
-    image: 'A hyper-realistic cinematic editorial portrait of a female survivor in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt14,
-    tags: ['post-apocalyptic', 'gritty', 'survivor'],
-    upvotes: 512,
-    createdAt: '2024-01-16',
-  },
+  // ========== WOMEN (8-14 existing + 51-60 new) ==========
+  { id: '8', title: 'Ethereal Fashion Editorial', category: 'women', content: 'An elegant model wearing a flowing silk gown in dusty rose, standing in an abandoned baroque palace. Golden hour light streaming through tall arched windows.', image: '', imageSrc: prompt8, tags: ['fashion', 'editorial', 'elegant'], upvotes: 528, createdAt: '2024-01-14' },
+  { id: '9', title: 'Minimalist Beauty Portrait', category: 'women', content: 'A close-up beauty portrait with flawless skin and natural makeup. Clean white studio background, soft butterfly lighting setup.', image: '', imageSrc: prompt9, tags: ['beauty', 'minimalist', 'studio'], upvotes: 445, createdAt: '2024-01-08' },
+  { id: '10', title: 'The Ethereal Goddess', category: 'women', content: 'A fantastical, dreamlike portrait of a woman with flowing, waist-length hair adorned with small, glowing bioluminescent flowers and crystals.', image: '', imageSrc: prompt10, tags: ['fantasy', 'ethereal', 'magical'], upvotes: 756, createdAt: '2024-01-20' },
+  { id: '11', title: 'The Urban Creative', category: 'women', content: 'A vibrant, candid street style photograph of a young woman with dyed copper-orange hair in a shag cut. She is laughing naturally while walking across a busy crosswalk.', image: '', imageSrc: prompt11, tags: ['street style', 'gen z', 'candid'], upvotes: 623, createdAt: '2024-01-19' },
+  { id: '12', title: 'Dark Academia Librarian', category: 'women', content: 'A moody, atmospheric portrait of a young historian in a dusty, candelabra-lit chamber of an ancient university library.', image: '', imageSrc: prompt12, tags: ['dark academia', 'moody', 'vintage'], upvotes: 534, createdAt: '2024-01-18' },
+  { id: '13', title: 'High-Fashion Futuristic Nomad', category: 'women', content: 'A striking, high-fashion editorial shot of a nomadic model in a desert landscape at sunset. She wears avant-garde clothing made of layered deconstructed fabrics.', image: '', imageSrc: prompt13, tags: ['high fashion', 'editorial', 'avant-garde'], upvotes: 678, createdAt: '2024-01-17' },
+  { id: '14', title: 'Post-Apocalyptic Survivor', category: 'women', content: 'A gritty, close-up portrait of a female survivor in a post-apocalyptic wasteland. Her face is smudged with dirt and grease.', image: '', imageSrc: prompt14, tags: ['post-apocalyptic', 'gritty', 'survivor'], upvotes: 512, createdAt: '2024-01-16' },
+  { id: '51', title: 'The Ethereal Goddess', category: 'women', content: 'A fantastical, dreamlike portrait of a woman with flowing, waist-length hair adorned with small, glowing bioluminescent flowers and crystals. She wears a gown made of iridescent, translucent silk that appears to be woven from moonlight. She is standing in an ancient, moss-covered forest grove at twilight, with soft golden light filtering through the canopy and fireflies drifting around her. Her expression is serene and powerful. The style should be painterly and ethereal, like a classical oil painting brought to life, with a soft focus and magical atmosphere.', image: '', imageSrc: prompt51, tags: ['fantasy', 'ethereal', 'soft lighting'], upvotes: 1089, createdAt: '2024-01-22' },
+  { id: '52', title: 'The Urban Creative', category: 'women', content: 'A vibrant, candid street style photograph of a young woman with dyed copper-orange hair in a shag cut. She is laughing naturally while walking across a busy crosswalk in Brooklyn, wearing oversized vintage denim overalls, a graphic band tee, and chunky platform sneakers. She carries a canvas tote bag covered in enamel pins and holds an iced coffee. The background shows yellow taxi cabs and brownstone buildings. The image has a bright, sunny daylight feel with saturated colors, natural film grain, and a candid, documentary-style composition.', image: '', imageSrc: prompt52, tags: ['gen z', 'street style', 'authentic'], upvotes: 867, createdAt: '2024-01-21' },
+  { id: '53', title: 'The Dark Academia Librarian', category: 'women', content: 'A moody, atmospheric portrait of a young historian in a dusty, candelabra-lit chamber of an ancient university library. She wears tweed trousers and a dark wool blazer, holding an open, leather-bound grimoire. Dust motes dance in shafts of moonlight entering through a tall Gothic window. Shelves overflow with old books, taxidermy ravens, and alchemical tools. The color palette is muted deep browns, forest greens, and aged gold. Photographed on analog film with natural light and a shallow depth of field.', image: '', imageSrc: prompt53, tags: ['dark academia', 'atmospheric', 'portrait'], upvotes: 756, createdAt: '2024-01-20' },
+  { id: '54', title: 'The High-Fashion Futuristic Nomad', category: 'women', content: 'A striking, high-fashion editorial shot of a nomadic model in a desert landscape at sunset. She wears avant-garde clothing made of layered deconstructed fabrics, reflective thermal blankets, and scavenged technical gear. Her face has geometric white paint markings. She stands atop a sand dune, holding a staff wrapped in wires. The lighting is dramatic golden hour sun, creating long shadows. The photo has a textured, raw feel, like a page from a luxury fashion magazine, shot on medium format film.', image: '', imageSrc: prompt54, tags: ['editorial', 'high-fashion', 'nomadic'], upvotes: 923, createdAt: '2024-01-19' },
+  { id: '55', title: 'The Golden Hour Portrait', category: 'women', content: 'A close-up portrait of a woman with natural, glowing skin and freckles, bathed in warm golden hour sunlight. She is standing in a field of tall golden grasses. Her hair is loose and windswept, catching the light. She has a gentle, relaxed smile. The background is a soft, warm bokeh of the sun setting behind her. The photo has a natural, unfiltered feel, shot with a shallow depth of field on a 35mm lens, highlighting the texture of her skin and hair.', image: '', imageSrc: prompt55, tags: ['natural beauty', 'golden hour', 'portrait'], upvotes: 1145, createdAt: '2024-01-18' },
+  { id: '56', title: 'The Cyberpunk Hacker', category: 'women', content: 'A portrait of a female hacker in a neon-lit cyberpunk city at night. She has short, asymmetrical hair dyed electric blue and wears a jacket with integrated LED strips. She is sitting in a cluttered room filled with monitors displaying scrolling code and holographic interfaces. Her face is illuminated by the screens, and she has cybernetic implants visible on her neck and hands. She looks at the camera with a confident, knowing smirk. The atmosphere is gritty and high-tech.', image: '', imageSrc: prompt56, tags: ['cyberpunk', 'sci-fi', 'hacker'], upvotes: 834, createdAt: '2024-01-17' },
+  { id: '57', title: 'The Cottagecore Baker', category: 'women', content: 'A warm, cozy photograph of a woman baking in a rustic cottage kitchen. She wears a floral apron over a vintage dress and has flour on her hands and face. Sunlight streams through a window filled with potted herbs. The kitchen is cluttered with baking ingredients, ceramic bowls, and freshly baked bread. A cat sleeps on a windowsill. The mood is comforting and wholesome, with a soft, natural color palette.', image: '', imageSrc: prompt57, tags: ['cottagecore', 'cozy', 'aesthetic'], upvotes: 678, createdAt: '2024-01-16' },
+  { id: '58', title: 'The Vintage Hollywood Starlet', category: 'women', content: 'A glamorous, black and white studio portrait of a woman in the style of 1940s Hollywood. She wears an elegant evening gown with a fur stole and has perfectly styled finger waves. She is posing dramatically against a painted backdrop of a city skyline. The lighting is classic Hollywood glamour, with soft, flattering light and a slight soft-focus effect. The image has a rich, velvety texture and deep blacks.', image: '', imageSrc: prompt58, tags: ['vintage', 'hollywood', 'glamour'], upvotes: 789, createdAt: '2024-01-15' },
+  { id: '59', title: 'The Fantasy Warrior', category: 'women', content: 'A full-body portrait of a female warrior in ornate fantasy armor made of silver and dragon scales. She stands on a rugged mountain peak, holding a glowing magical sword. Her cape billows in the wind. In the background, there is a sprawling fantasy landscape with castles and dragons flying in the distance. The sky is dramatic with storm clouds and rays of sunlight. The style is epic and heroic, with high detail on the armor and weaponry.', image: '', imageSrc: prompt59, tags: ['fantasy', 'warrior', 'epic'], upvotes: 1234, createdAt: '2024-01-14' },
+  { id: '60', title: 'The Minimalist Beauty', category: 'women', content: 'A minimalist beauty portrait of a woman with a clean, fresh face and slicked-back hair. She is wearing a simple white shirt against a plain white studio background. The lighting is soft and even, highlighting her natural features and bone structure. Her expression is neutral and calm. The image is clean, modern, and uncluttered, with a focus on simplicity and natural beauty.', image: '', imageSrc: prompt60, tags: ['minimalist', 'beauty', 'clean'], upvotes: 567, createdAt: '2024-01-13' },
 
-  // ========== COUPLE ==========
-  {
-    id: '15',
-    title: 'Romantic Garden Moment',
-    category: 'couple',
-    content: 'A couple dancing in a moonlit English garden surrounded by blooming roses and wisteria. Soft bokeh fairy lights in the background.',
-    image: 'A hyper-realistic cinematic editorial portrait of a couple in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt15,
-    tags: ['romantic', 'garden', 'dreamy'],
-    upvotes: 456,
-    createdAt: '2024-01-13',
-  },
-  {
-    id: '16',
-    title: 'The Cinematic Romance',
-    category: 'couple',
-    content: 'A romantic, cinematic photograph of a couple caught in a passionate embrace on a rainy evening in Paris. They are under a single shared umbrella.',
-    image: 'A hyper-realistic cinematic editorial portrait of a couple in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt16,
-    tags: ['paris', 'romantic', 'cinematic'],
-    upvotes: 834,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '17',
-    title: 'The Adventure Duo',
-    category: 'couple',
-    content: 'An adventurous lifestyle shot of a couple hiking on a mountain ridge at sunrise. Both are wearing technical outdoor gear.',
-    image: 'A hyper-realistic cinematic editorial portrait of an adventurous couple in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt17,
-    tags: ['adventure', 'gorpcore', 'outdoors'],
-    upvotes: 745,
-    createdAt: '2024-01-19',
-  },
+  // ========== COUPLE (15-17 existing + 61-70 new) ==========
+  { id: '15', title: 'Romantic Garden Moment', category: 'couple', content: 'A couple dancing in a moonlit English garden surrounded by blooming roses and wisteria. Soft bokeh fairy lights in the background.', image: '', imageSrc: prompt15, tags: ['romantic', 'garden', 'dreamy'], upvotes: 456, createdAt: '2024-01-13' },
+  { id: '16', title: 'The Cinematic Romance', category: 'couple', content: 'A romantic, cinematic photograph of a couple caught in a passionate embrace on a rainy evening in Paris. They are under a single shared umbrella.', image: '', imageSrc: prompt16, tags: ['paris', 'romantic', 'cinematic'], upvotes: 834, createdAt: '2024-01-20' },
+  { id: '17', title: 'The Adventure Duo', category: 'couple', content: 'An adventurous lifestyle shot of a couple hiking on a mountain ridge at sunrise. Both are wearing technical outdoor gear.', image: '', imageSrc: prompt17, tags: ['adventure', 'gorpcore', 'outdoors'], upvotes: 745, createdAt: '2024-01-19' },
+  { id: '61', title: 'The Cinematic Romance', category: 'couple', content: 'A romantic, cinematic photograph of a couple caught in a passionate embrace on a rainy evening in Paris. They are under a single shared umbrella, standing on a cobblestone bridge over the Seine river. The Eiffel Tower is visible but softly blurred in the distance, illuminated against a deep blue twilight sky. Wet pavement reflects the warm glow of streetlamps and cafe lights. The image should have a moody, intimate atmosphere, with a shallow depth of field, visible film grain, and a color grade emphasizing deep blues, oranges, and warm shadows. Shot on Kodak Portra 800.', image: '', imageSrc: prompt61, tags: ['romantic', 'cinematic', 'paris'], upvotes: 1456, createdAt: '2024-01-22' },
+  { id: '62', title: 'The Adventure Duo', category: 'couple', content: 'An adventurous lifestyle shot of a couple hiking on a mountain ridge at sunrise. Both are wearing technical outdoor gear from brands like Patagonia and Arc\'teryx, including backpacks and hiking boots. They are holding hands, looking out over a sea of clouds with jagged mountain peaks piercing through, bathed in warm golden light. Their faces are joyful and wind-swept. The photo should feel natural and inspiring, with sharp detail on the gear and landscape, wide-angle perspective, and a sense of grand scale and freedom.', image: '', imageSrc: prompt62, tags: ['adventure', 'gorpcore', 'outdoors'], upvotes: 1123, createdAt: '2024-01-21' },
+  { id: '63', title: 'The Vintage Road Trip', category: 'couple', content: 'A candid photograph of a couple on a vintage road trip, sitting on the hood of a classic 1970s convertible car. They are parked on a desert road at sunset, with monumental rock formations in the background. The woman wears a bohemian dress and a wide-brimmed hat, and the man wears a denim jacket and jeans. They are laughing and sharing a blanket. The photo has a retro film look, with warm, faded colors, light leaks, and a nostalgic feel.', image: '', imageSrc: prompt63, tags: ['retro', 'nostalgic', 'road trip'], upvotes: 934, createdAt: '2024-01-20' },
+  { id: '64', title: 'The Cozy Home Life', category: 'couple', content: 'A warm, candid documentary-style photograph of a couple in their cozy home. They are cooking together in a cluttered but inviting kitchen, laughing and sharing a taste from a pot. The room is filled with plants, books, and personal items. Sunlight streams through a window. They are wearing comfortable, casual clothing. The image captures a genuine moment of connection and domestic happiness, with a natural film grain.', image: '', imageSrc: prompt64, tags: ['authentic', 'documentary', 'cozy'], upvotes: 789, createdAt: '2024-01-19' },
+  { id: '65', title: 'The High-Fashion Power Couple', category: 'couple', content: 'A striking, high-fashion editorial photograph of a couple posing powerfully in a modern, minimalist architectural setting. They are both wearing sharp, tailored suits from a luxury designer. The woman wears a white suit and the man a black one. They stand back-to-back with confident, serious expressions. The lighting is stark and dramatic, creating strong shadows. The overall aesthetic is clean, sophisticated, and powerful.', image: '', imageSrc: prompt65, tags: ['editorial', 'luxury', 'power couple'], upvotes: 1067, createdAt: '2024-01-18' },
+  { id: '66', title: 'The Fantasy Royal Couple', category: 'couple', content: 'A regal portrait of a fantasy royal couple standing on a castle balcony overlooking their kingdom. The woman wears an elaborate gown with embroidered magical symbols, and the man wears ornate armor with a crown. They are holding hands and looking out at a sprawling fantasy landscape with flying creatures and magical towers. The sun is setting, casting a golden glow on the scene. The style is rich and detailed, like a fantasy painting.', image: '', imageSrc: prompt66, tags: ['fantasy', 'royal', 'epic'], upvotes: 1345, createdAt: '2024-01-17' },
+  { id: '67', title: 'The Cyberpunk Duo', category: 'couple', content: 'A portrait of a couple in a neon-lit cyberpunk city at night. They are wearing futuristic clothing with integrated LEDs and cybernetic enhancements. They are standing on a bridge overlooking a busy street with flying vehicles. The woman has neon-colored hair and the man has a robotic arm. They are looking at each other with a rebellious, confident expression. The atmosphere is gritty and high-tech, with lots of neon light reflections.', image: '', imageSrc: prompt67, tags: ['cyberpunk', 'sci-fi', 'futuristic'], upvotes: 956, createdAt: '2024-01-16' },
+  { id: '68', title: 'The Bohemian Wedding', category: 'couple', content: 'A photograph of a couple at their bohemian-style wedding in a forest. They are standing under a floral archway made of wildflowers and branches. The bride wears a vintage lace dress and a flower crown, and the groom wears a tweed suit. They are surrounded by friends and family in a natural setting with string lights and rustic decorations. The photo has a warm, natural, and joyful feel.', image: '', imageSrc: prompt68, tags: ['bohemian', 'wedding', 'rustic'], upvotes: 1189, createdAt: '2024-01-15' },
+  { id: '69', title: 'The Artistic Muse and Painter', category: 'couple', content: 'A candid photograph of an artist couple in their studio. The woman is posing as a muse, draped in fabric, while the man is painting her portrait on a canvas. The studio is filled with art supplies, paintings, and sculptures. Natural light streams through a large window. They are both covered in paint and laughing. The image captures a moment of creative collaboration and love.', image: '', imageSrc: prompt69, tags: ['creative', 'bohemian', 'artistic'], upvotes: 823, createdAt: '2024-01-14' },
+  { id: '70', title: 'The Elderly Couple\'s Enduring Love', category: 'couple', content: 'A heartwarming portrait of an elderly couple holding hands and walking in a park in autumn. They are both smiling and looking at each other with deep affection. Leaves are fallen on the ground around them. The photo has a warm, nostalgic feel, capturing a lifetime of love and companionship. The lighting is soft and golden, and the film grain is natural.', image: '', imageSrc: prompt70, tags: ['emotional', 'timeless', 'love'], upvotes: 1567, createdAt: '2024-01-13' },
 
-  // ========== KIDS ==========
-  {
-    id: '18',
-    title: 'Whimsical Childhood Wonder',
-    category: 'kids',
-    content: 'A curious 5-year-old child exploring a sunlit meadow filled with wildflowers and butterflies. Golden hour backlighting creating a magical halo effect.',
-    image: 'A hyper-realistic cinematic editorial portrait of a curious 5-year-old child in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt18,
-    tags: ['whimsical', 'childhood', 'nature'],
-    upvotes: 289,
-    createdAt: '2024-01-12',
-  },
-  {
-    id: '19',
-    title: 'The Whimsical Explorer',
-    category: 'kids',
-    content: 'A 3D animated still in the style of Pixar, showing a cute 5-year-old kid with messy brown hair and oversized aviator goggles.',
-    image: 'A hyper-realistic cinematic editorial portrait of a cute 5-year-old explorer in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt19,
-    tags: ['pixar', '3d', 'whimsical'],
-    upvotes: 678,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '20',
-    title: 'The Vintage Childhood',
-    category: 'kids',
-    content: 'A nostalgic, film-like photo of two siblings, a boy and a girl aged roughly 6 and 8, playing in a sun-drenched field of tall grass.',
-    image: 'A hyper-realistic cinematic editorial portrait of two siblings in a dark moody studio, surrounded by soft drifting smoke.',
-    imageSrc: prompt20,
-    tags: ['nostalgic', 'vintage', '70s'],
-    upvotes: 534,
-    createdAt: '2024-01-19',
-  },
+  // ========== KIDS (18-20 existing + 71-80 new) ==========
+  { id: '18', title: 'Whimsical Childhood Wonder', category: 'kids', content: 'A curious 5-year-old child exploring a sunlit meadow filled with wildflowers and butterflies. Golden hour backlighting creating a magical halo effect.', image: '', imageSrc: prompt18, tags: ['whimsical', 'childhood', 'nature'], upvotes: 289, createdAt: '2024-01-12' },
+  { id: '19', title: 'The Whimsical Explorer', category: 'kids', content: 'A 3D animated still in the style of Pixar, showing a cute 5-year-old kid with messy brown hair and oversized aviator goggles.', image: '', imageSrc: prompt19, tags: ['pixar', '3d', 'whimsical'], upvotes: 678, createdAt: '2024-01-20' },
+  { id: '20', title: 'The Vintage Childhood', category: 'kids', content: 'A nostalgic, film-like photo of two siblings, a boy and a girl aged roughly 6 and 8, playing in a sun-drenched field of tall grass.', image: '', imageSrc: prompt20, tags: ['nostalgic', 'vintage', '70s'], upvotes: 534, createdAt: '2024-01-19' },
+  { id: '71', title: 'The Whimsical Explorer', category: 'kids', content: 'A 3D animated still in the style of Pixar, showing a cute 5-year-old kid with messy brown hair and oversized aviator goggles pushed up on their forehead. They are wearing a patched-up cardboard robot costume and standing in a backyard that has been transformed into a magical jungle with giant, colorful plants made of household items. The kid is holding a magnifying glass, looking curiously at a glowing, magical beetle. The lighting is bright and warm, with soft, inviting textures, playful character design, and a sense of wonder and imagination.', image: '', imageSrc: prompt71, tags: ['pixar', 'disney', 'animation'], upvotes: 1234, createdAt: '2024-01-22' },
+  { id: '72', title: 'The Vintage Childhood', category: 'kids', content: 'A nostalgic, film-like photo of two siblings, a boy and a girl aged roughly 6 and 8, playing in a sun-drenched field of tall grass. They are wearing retro 70s clothing: striped ringer tees and corduroy overalls. The boy is flying a colorful kite shaped like a dragon, and the girl is chasing it, laughing. The photo has a warm, desaturated color palette with sepia tones, light leaks, and heavy film grain, giving it the feeling of an authentic, treasured memory from a family photo album.', image: '', imageSrc: prompt72, tags: ['nostalgic', '70s', 'film'], upvotes: 867, createdAt: '2024-01-21' },
+  { id: '73', title: 'The Magical Forest Encounter', category: 'kids', content: 'A magical photograph of a young child, around 4 years old, sitting on a mossy log in an ancient forest. The child is wearing a hooded cloak made of leaves and is looking with wonder at a small, glowing fairy hovering in front of their face. The forest is filled with bioluminescent plants and glowing mushrooms. Beams of magical light filter through the canopy. The style is enchanting and dreamlike, with a rich, saturated color palette.', image: '', imageSrc: prompt73, tags: ['fantasy', 'fairytale', 'magical'], upvotes: 1089, createdAt: '2024-01-20' },
+  { id: '74', title: 'The Little Scientist', category: 'kids', content: 'A candid, documentary-style photograph of a curious child, around 7 years old, doing a science experiment in a messy home lab. They are wearing a lab coat and safety goggles, looking intently at a bubbling beaker with a look of concentration and excitement. The table is covered with test tubes, colored liquids, and notebooks. Natural light streams through a window. The image captures the joy of discovery and learning.', image: '', imageSrc: prompt74, tags: ['STEM', 'educational', 'curious'], upvotes: 756, createdAt: '2024-01-19' },
+  { id: '75', title: 'The Superhero in Training', category: 'kids', content: 'A playful photograph of a child, around 5 years old, wearing a homemade superhero costume with a cape and mask, jumping off a couch in a living room. They are mid-air in a dynamic pose, with a look of determination. Toys are scattered around the room, which is transformed into a superhero lair with cardboard boxes and blanket forts. The photo is full of energy and action, with a slight motion blur.', image: '', imageSrc: prompt75, tags: ['action', 'playful', 'superhero'], upvotes: 934, createdAt: '2024-01-18' },
+  { id: '76', title: 'The Animal Best Friend', category: 'kids', content: 'A heartwarming photograph of a young child, around 3 years old, hugging a large, gentle dog in a meadow. The child is laughing, and the dog is licking their face. They are surrounded by wildflowers. The lighting is soft and golden, capturing a moment of pure joy and connection between a child and their pet. The photo has a natural, organic feel.', image: '', imageSrc: prompt76, tags: ['heartwarming', 'nature', 'pets'], upvotes: 1456, createdAt: '2024-01-17' },
+  { id: '77', title: 'The Little Artist', category: 'kids', content: 'A cheerful photograph of a child, around 4 years old, covered in paint, happily painting on a large canvas outdoors. Their face and clothes are smeared with colorful paint. They are holding a paintbrush and smiling broadly at the camera. The canvas is a riot of bright colors. The setting is a sunny garden. The photo is messy, joyful, and full of life.', image: '', imageSrc: prompt77, tags: ['creative', 'messy', 'joyful'], upvotes: 823, createdAt: '2024-01-16' },
+  { id: '78', title: 'The Cozy Bedtime Story', category: 'kids', content: 'A warm, cozy photograph of a parent reading a bedtime story to their young child, around 2 years old, in bed. They are both cuddled up under a blanket, looking at a picture book. The room is dimly lit by a soft bedside lamp. The child has a sleepy, content expression. The image captures a tender, intimate moment of family life.', image: '', imageSrc: prompt78, tags: ['warm', 'domestic', 'family'], upvotes: 1189, createdAt: '2024-01-15' },
+  { id: '79', title: 'The Future Astronaut', category: 'kids', content: 'A dreamy photograph of a young child, around 6 years old, wearing a toy astronaut helmet and suit, looking up at a star-filled night sky. They are standing in a field, and a toy rocket is next to them. The Milky Way is visible overhead. The photo has a sense of wonder and infinite possibilities, with a cool, blue color palette.', image: '', imageSrc: prompt79, tags: ['sci-fi', 'dreamy', 'aspirational'], upvotes: 1067, createdAt: '2024-01-14' },
+  { id: '80', title: 'The Rainy Day Puddle Jumper', category: 'kids', content: 'A candid, joyful photograph of a child, around 3 years old, wearing bright yellow rainboots and a raincoat, jumping and splashing in a large mud puddle. Water and mud are splashing around them. They have a huge grin on their face. The setting is a rainy park. The photo is full of action and happiness, capturing the simple joy of playing in the rain.', image: '', imageSrc: prompt80, tags: ['joyful', 'candid', 'playful'], upvotes: 945, createdAt: '2024-01-13' },
 
-  // ========== LANDSCAPES ==========
-  {
-    id: '21',
-    title: 'Majestic Mountain Vista',
-    category: 'landscapes',
-    content: 'Dramatic panoramic view of the Swiss Alps at sunrise, with low-hanging clouds creating a sea below the peaks.',
-    image: 'A hyper-realistic cinematic editorial photograph of a majestic mountain vista in a dark moody studio setting.',
-    imageSrc: prompt21,
-    tags: ['mountains', 'sunrise', 'panoramic'],
-    upvotes: 672,
-    createdAt: '2024-01-11',
-  },
-  {
-    id: '22',
-    title: 'Nordic Winter Wonderland',
-    category: 'landscapes',
-    content: 'Northern Lights dancing over a frozen Norwegian fjord, snow-covered pine trees in the foreground.',
-    image: 'A hyper-realistic cinematic editorial photograph of the Northern Lights in a dark moody studio setting.',
-    imageSrc: prompt22,
-    tags: ['aurora', 'winter', 'nordic'],
-    upvotes: 723,
-    createdAt: '2024-01-06',
-  },
-  {
-    id: '23',
-    title: 'The Surrealistic Dreamscape',
-    category: 'landscapes',
-    content: 'A surreal, breathtaking landscape showing a desert where the sand dunes are made of swirling pastel colors.',
-    image: 'A hyper-realistic cinematic editorial photograph of a surrealistic dreamscape with pastel-colored sand dunes.',
-    imageSrc: prompt23,
-    tags: ['surreal', 'dreamscape', 'abstract'],
-    upvotes: 867,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '24',
-    title: 'The Bioluminescent Cove',
-    category: 'landscapes',
-    content: 'A fantastical landscape photograph of a secret ocean cove at night where the water glows an intense electric blue.',
-    image: 'A hyper-realistic cinematic editorial photograph of a bioluminescent cove with electric blue glowing water.',
-    imageSrc: prompt24,
-    tags: ['bioluminescent', 'fantasy', 'magical'],
-    upvotes: 945,
-    createdAt: '2024-01-19',
-  },
-  {
-    id: '25',
-    title: 'Brutalist Jungle Home',
-    category: 'landscapes',
-    content: 'An architectural photograph of a brutalist concrete house embedded deep within a lush tropical jungle.',
-    image: 'A hyper-realistic cinematic editorial photograph of a brutalist jungle home with raw concrete structures.',
-    imageSrc: prompt25,
-    tags: ['brutalist', 'architecture', 'jungle'],
-    upvotes: 712,
-    createdAt: '2024-01-18',
-  },
-  {
-    id: '26',
-    title: 'Cottagecore Bakery',
-    category: 'landscapes',
-    content: 'Inside a rustic, warm cottagecore bakery kitchen bathed in morning light. Wooden counters are piled high with freshly baked sourdough loaves.',
-    image: 'A hyper-realistic cinematic editorial photograph of a cottagecore bakery interior.',
-    imageSrc: prompt26,
-    tags: ['cottagecore', 'cozy', 'bakery'],
-    upvotes: 623,
-    createdAt: '2024-01-17',
-  },
-  {
-    id: '27',
-    title: 'Minimalist Zen Garden',
-    category: 'landscapes',
-    content: 'An ultra-minimalist architectural photograph of a modern Japanese Zen garden. A single, perfectly shaped bonsai tree sits on a moss island.',
-    image: 'A hyper-realistic cinematic editorial photograph of a minimalist Zen garden.',
-    imageSrc: prompt27,
-    tags: ['zen', 'minimalist', 'japanese'],
-    upvotes: 534,
-    createdAt: '2024-01-16',
-  },
-  {
-    id: '28',
-    title: 'Abstract Fluid Art',
-    category: 'landscapes',
-    content: 'A mesmerizing abstract photograph of swirling colored liquids and ferrofluid reacting to magnets.',
-    image: 'A hyper-realistic cinematic editorial photograph of abstract fluid art with deep blues and metallic golds.',
-    imageSrc: prompt28,
-    tags: ['abstract', 'fluid art', 'macro'],
-    upvotes: 456,
-    createdAt: '2024-01-15',
-  },
-  {
-    id: '29',
-    title: 'Macro Insect Kingdom',
-    category: 'landscapes',
-    content: 'An incredible macro photograph of a jewel beetle sitting on a dew-covered moss spore.',
-    image: 'A hyper-realistic cinematic editorial photograph of a jewel beetle with iridescent scales.',
-    imageSrc: prompt29,
-    tags: ['macro', 'nature', 'wildlife'],
-    upvotes: 678,
-    createdAt: '2024-01-14',
-  },
-  {
-    id: '30',
-    title: '1980s Mall Madness',
-    category: 'landscapes',
-    content: 'A vibrant, chaotic photograph inside an American shopping mall in 1985. Teenagers with big hair crowd around an arcade.',
-    image: 'A hyper-realistic cinematic editorial photograph of an 80s shopping mall interior.',
-    imageSrc: prompt30,
-    tags: ['80s', 'nostalgic', 'retro'],
-    upvotes: 589,
-    createdAt: '2024-01-13',
-  },
+  // ========== LANDSCAPES (21-30 existing + 81-90 new) ==========
+  { id: '21', title: 'Majestic Mountain Vista', category: 'landscapes', content: 'Dramatic panoramic view of the Swiss Alps at sunrise, with low-hanging clouds creating a sea below the peaks.', image: '', imageSrc: prompt21, tags: ['mountains', 'sunrise', 'panoramic'], upvotes: 672, createdAt: '2024-01-11' },
+  { id: '22', title: 'Nordic Winter Wonderland', category: 'landscapes', content: 'Northern Lights dancing over a frozen Norwegian fjord, snow-covered pine trees in the foreground.', image: '', imageSrc: prompt22, tags: ['aurora', 'winter', 'nordic'], upvotes: 723, createdAt: '2024-01-06' },
+  { id: '23', title: 'The Surrealistic Dreamscape', category: 'landscapes', content: 'A surreal, breathtaking landscape showing a desert where the sand dunes are made of swirling pastel colors.', image: '', imageSrc: prompt23, tags: ['surreal', 'dreamscape', 'abstract'], upvotes: 867, createdAt: '2024-01-20' },
+  { id: '24', title: 'The Bioluminescent Cove', category: 'landscapes', content: 'A fantastical landscape photograph of a secret ocean cove at night where the water glows an intense electric blue.', image: '', imageSrc: prompt24, tags: ['bioluminescent', 'fantasy', 'magical'], upvotes: 945, createdAt: '2024-01-19' },
+  { id: '25', title: 'Brutalist Jungle Home', category: 'landscapes', content: 'An architectural photograph of a brutalist concrete house embedded deep within a lush tropical jungle.', image: '', imageSrc: prompt25, tags: ['brutalist', 'architecture', 'jungle'], upvotes: 712, createdAt: '2024-01-18' },
+  { id: '26', title: 'Cottagecore Bakery', category: 'landscapes', content: 'Inside a rustic, warm cottagecore bakery kitchen bathed in morning light.', image: '', imageSrc: prompt26, tags: ['cottagecore', 'cozy', 'bakery'], upvotes: 623, createdAt: '2024-01-17' },
+  { id: '27', title: 'Minimalist Zen Garden', category: 'landscapes', content: 'An ultra-minimalist architectural photograph of a modern Japanese Zen garden.', image: '', imageSrc: prompt27, tags: ['zen', 'minimalist', 'japanese'], upvotes: 534, createdAt: '2024-01-16' },
+  { id: '28', title: 'Abstract Fluid Art', category: 'landscapes', content: 'A mesmerizing abstract photograph of swirling colored liquids and ferrofluid.', image: '', imageSrc: prompt28, tags: ['abstract', 'fluid art', 'macro'], upvotes: 456, createdAt: '2024-01-15' },
+  { id: '29', title: 'Macro Insect Kingdom', category: 'landscapes', content: 'An incredible macro photograph of a jewel beetle sitting on a dew-covered moss spore.', image: '', imageSrc: prompt29, tags: ['macro', 'nature', 'wildlife'], upvotes: 678, createdAt: '2024-01-14' },
+  { id: '30', title: '1980s Mall Madness', category: 'landscapes', content: 'A vibrant, chaotic photograph inside an American shopping mall in 1985.', image: '', imageSrc: prompt30, tags: ['80s', 'nostalgic', 'retro'], upvotes: 589, createdAt: '2024-01-13' },
+  { id: '81', title: 'The Surrealistic Dreamscape', category: 'landscapes', content: 'A surreal, breathtaking landscape showing a desert where the sand dunes are made of swirling pastel colors like pink, mint green, and lavender. Instead of cacti, giant, translucent crystal formations in geometric shapes grow from the ground, refracting the light of two moons visible in a violet sky. A river of liquid gold flows through the center of the scene. The lighting is ethereal and diffused, creating a dreamlike, impossible world that challenges reality. Highly detailed render with a focus on texture and light refraction.', image: '', imageSrc: prompt81, tags: ['surreal', 'abstract', 'otherworldly'], upvotes: 1345, createdAt: '2024-01-22' },
+  { id: '82', title: 'The Majestic Mountain Vista', category: 'landscapes', content: 'A dramatic panoramic photograph of a majestic mountain range at sunrise. Jagged, snow-capped peaks pierce through a sea of low-hanging clouds that fill the valley below. The rising sun casts a warm, golden and rose-colored glow on the mountain faces and the clouds. A winding river and an alpine forest are visible in the foreground. The scale is immense, and the light is epic and dramatic. 8K resolution, highly detailed landscape photography.', image: '', imageSrc: prompt82, tags: ['epic', 'nature', 'cinematic'], upvotes: 1567, createdAt: '2024-01-21' },
+  { id: '83', title: 'The Bioluminescent Cove', category: 'landscapes', content: 'A fantastical landscape photograph of a secret ocean cove at night where the water glows an intense electric blue due to bioluminescent plankton. Massive, ancient tree roots gnarled into archways drape over the water, covered in glowing moss and purple glowing mushrooms. A small, wooden rowboat with a lantern sits in the center of the glowing water. A full moon is partially obscured by clouds. The style is magical realism, long exposure photography, with vibrant, saturated colors and razor-sharp detail.', image: '', imageSrc: prompt83, tags: ['bioluminescent', 'fantasy', 'magical'], upvotes: 1789, createdAt: '2024-01-20' },
+  { id: '84', title: 'The Nordic Winter Wonderland', category: 'landscapes', content: 'A minimalist landscape photograph of a frozen Nordic fjord in winter. The scene is dominated by white snow and ice. Snow-covered pine trees line the shores of a frozen lake. A small, red wooden cabin is the only splash of color in the vast white landscape. The sky is overcast and grey, and the light is flat and diffused. The composition is clean and simple, emphasizing the silence and cold beauty of the winter landscape.', image: '', imageSrc: prompt84, tags: ['minimalist', 'cold', 'winter'], upvotes: 1123, createdAt: '2024-01-19' },
+  { id: '85', title: 'The Brutalist Jungle Home', category: 'landscapes', content: 'An architectural photograph of a brutalist concrete house embedded deep within a lush tropical jungle. Raw, imposing concrete geometric structures are softened by creeping monstera plants, ferns, and hanging vines taking over the facade. An infinity pool reflects the dense canopy above. Large glass walls connect the raw interior with the humid exterior. It is raining lightly, making the concrete surfaces look dark and wet. The mood is serene, ancient, and architectural, emphasizing the contrast between man-made gray and natural green.', image: '', imageSrc: prompt85, tags: ['architecture', 'brutalist', 'jungle'], upvotes: 934, createdAt: '2024-01-18' },
+  { id: '86', title: 'The Desert Oasis at Sunset', category: 'landscapes', content: 'A vibrant landscape photograph of a desert oasis at sunset. A large, clear pool of water is surrounded by palm trees and lush vegetation, contrasting with the surrounding orange sand dunes. The setting sun casts a warm, golden light on the scene, creating long shadows. The sky is filled with vibrant hues of orange, pink, and purple. Camels are drinking at the water\'s edge. The colors are rich and saturated.', image: '', imageSrc: prompt86, tags: ['warm', 'vibrant', 'desert'], upvotes: 1067, createdAt: '2024-01-17' },
+  { id: '87', title: 'The Ancient Forest Grove', category: 'landscapes', content: 'A mystical photograph of an ancient, old-growth forest grove. Massive, gnarled trees covered in moss and ferns tower over a forest floor covered in a thick carpet of moss and wildflowers. A small, winding stream flows through the grove. Shafts of sunlight filter through the dense canopy, creating a magical, dappled light effect. The atmosphere is quiet, ancient, and enchanted.', image: '', imageSrc: prompt87, tags: ['mystical', 'old growth', 'forest'], upvotes: 1234, createdAt: '2024-01-16' },
+  { id: '88', title: 'The Dramatic Coastal Cliff', category: 'landscapes', content: 'A dramatic landscape photograph of rugged coastal cliffs dropping into a turbulent ocean. Waves crash violently against the base of the cliffs, creating sea spray. The sky is dark and stormy, with ominous clouds. A lighthouse stands on the edge of the cliff, its light beaming out to sea. The mood is powerful, wild, and dramatic.', image: '', imageSrc: prompt88, tags: ['rugged', 'seascape', 'dramatic'], upvotes: 1089, createdAt: '2024-01-15' },
+  { id: '89', title: 'The Rolling Tuscany Hills', category: 'landscapes', content: 'An idyllic landscape photograph of the rolling hills of Tuscany, Italy, at sunrise. The hills are covered in vineyards and cypress trees. A winding dirt road leads to a rustic stone farmhouse. Mist hangs in the valleys, and the rising sun casts a warm, golden light on the landscape. The colors are soft and pastoral, with shades of green, gold, and ochre.', image: '', imageSrc: prompt89, tags: ['idyllic', 'pastoral', 'tuscan'], upvotes: 1456, createdAt: '2024-01-14' },
+  { id: '90', title: 'The Alien Planet Surface', category: 'landscapes', content: 'A sci-fi landscape photograph of the surface of an alien planet. The ground is covered in strange, purple rock formations and glowing, bioluminescent flora. Two moons, one red and one blue, are visible in the sky, which is a swirling nebula of colors. A futuristic exploration rover is parked in the foreground. The atmosphere is strange and otherworldly.', image: '', imageSrc: prompt90, tags: ['sci-fi', 'exoplanet', 'alien'], upvotes: 1189, createdAt: '2024-01-13' },
 
-  // ========== SCI-FI ==========
-  {
-    id: '31',
-    title: 'Cyberpunk Metropolis',
-    category: 'scifi',
-    content: 'A sprawling neon-lit cyberpunk cityscape in 2087, holographic advertisements floating between impossibly tall skyscrapers.',
-    image: 'A hyper-realistic cinematic editorial photograph of a cyberpunk metropolis with neon-lit skyscrapers.',
-    imageSrc: prompt31,
-    tags: ['cyberpunk', 'futuristic', 'neon'],
-    upvotes: 891,
-    createdAt: '2024-01-10',
-  },
-  {
-    id: '32',
-    title: 'Space Station Observatory',
-    category: 'scifi',
-    content: 'Interior of a futuristic space station observation deck, with a massive curved window showing Earth and the Milky Way.',
-    image: 'A hyper-realistic cinematic editorial photograph of a space station observatory.',
-    imageSrc: prompt32,
-    tags: ['space', 'futuristic', 'minimal'],
-    upvotes: 567,
-    createdAt: '2024-01-07',
-  },
-  {
-    id: '33',
-    title: 'The Neo-Terra City',
-    category: 'scifi',
-    content: 'A wide-angle landscape of a futuristic "solarpunk" city built in harmony with nature.',
-    image: 'A hyper-realistic cinematic editorial photograph of a solarpunk city.',
-    imageSrc: prompt33,
-    tags: ['solarpunk', 'utopian', 'futuristic'],
-    upvotes: 923,
-    createdAt: '2024-01-20',
-  },
-  {
-    id: '34',
-    title: 'Cyberpunk Street Market',
-    category: 'scifi',
-    content: 'A bustling, chaotic street market in a futuristic cyberpunk mega-city at night.',
-    image: 'A hyper-realistic cinematic editorial photograph of a cyberpunk street market.',
-    imageSrc: prompt34,
-    tags: ['cyberpunk', 'market', 'neon'],
-    upvotes: 856,
-    createdAt: '2024-01-19',
-  },
-  {
-    id: '35',
-    title: 'The Deep Space Hauler',
-    category: 'scifi',
-    content: 'A highly detailed exterior shot of a massive, industrial deep-space mining vessel drifting past the rings of Saturn.',
-    image: 'A hyper-realistic cinematic editorial photograph of a deep space hauler vessel.',
-    imageSrc: prompt35,
-    tags: ['space', 'hard sci-fi', 'industrial'],
-    upvotes: 789,
-    createdAt: '2024-01-18',
-  },
-  {
-    id: '36',
-    title: 'Retro-Futuristic Diner',
-    category: 'scifi',
-    content: 'A stylized photo of a 1950s-style American diner with a retro-futuristic twist. Chrome robot servers on wheels.',
-    image: 'A hyper-realistic cinematic editorial photograph of a retro-futuristic diner.',
-    imageSrc: prompt36,
-    tags: ['retro-futuristic', 'diner', 'atomic age'],
-    upvotes: 678,
-    createdAt: '2024-01-17',
-  },
-  {
-    id: '37',
-    title: 'Neon Tokyo Rain',
-    category: 'scifi',
-    content: 'A candid street photograph taken through the rain-streaked windshield of a taxi in Shinjuku, Tokyo at night.',
-    image: 'A hyper-realistic cinematic editorial photograph of neon Tokyo rain.',
-    imageSrc: prompt37,
-    tags: ['tokyo', 'cyberpunk', 'urban'],
-    upvotes: 723,
-    createdAt: '2024-01-16',
-  },
-  {
-    id: '38',
-    title: 'Isometric Cozy Gaming Room',
-    category: 'scifi',
-    content: 'A cute, highly detailed isometric 3D render of a cozy gaming room at night.',
-    image: 'A hyper-realistic cinematic editorial 3D render of an isometric cozy gaming room.',
-    imageSrc: prompt38,
-    tags: ['isometric', '3d', 'cozy'],
-    upvotes: 645,
-    createdAt: '2024-01-15',
-  },
-  {
-    id: '39',
-    title: 'Steampunk Inventor\'s Workshop',
-    category: 'scifi',
-    content: 'Inside a cluttered steampunk workshop filled with brass gears, copper piping, and bubbling glass vials.',
-    image: 'A hyper-realistic cinematic editorial photograph of a steampunk inventor\'s workshop.',
-    imageSrc: prompt39,
-    tags: ['steampunk', 'workshop', 'vintage'],
-    upvotes: 567,
-    createdAt: '2024-01-14',
-  },
-  {
-    id: '40',
-    title: 'The Crystal Dragon',
-    category: 'scifi',
-    content: 'A majestic full-body shot of a massive dragon made entirely of jagged, translucent quartz and amethyst crystals.',
-    image: 'A hyper-realistic cinematic editorial photograph of a crystal dragon.',
-    imageSrc: prompt40,
-    tags: ['fantasy', 'dragon', 'crystal'],
-    upvotes: 934,
-    createdAt: '2024-01-13',
-  },
+  // ========== SCI-FI (31-40 existing + 91-100 new) ==========
+  { id: '31', title: 'Neo-Terra Cityscape', category: 'scifi', content: 'A futuristic solarpunk megacity with vertical gardens covering every skyscraper. Flying vehicles weave between buildings.', image: '', imageSrc: prompt31, tags: ['solarpunk', 'utopian', 'city'], upvotes: 834, createdAt: '2024-01-10' },
+  { id: '32', title: 'Deep Space Mining Station', category: 'scifi', content: 'A massive industrial space station orbiting Jupiter, with cargo ships docking. Hard sci-fi aesthetic with realistic proportions.', image: '', imageSrc: prompt32, tags: ['space', 'industrial', 'hard sci-fi'], upvotes: 723, createdAt: '2024-01-05' },
+  { id: '33', title: 'Neo-Terra City', category: 'scifi', content: 'A wide-angle landscape of a futuristic "solarpunk" city built in harmony with nature.', image: '', imageSrc: prompt33, tags: ['solarpunk', 'utopian', 'future'], upvotes: 945, createdAt: '2024-01-20' },
+  { id: '34', title: 'Cyberpunk Street Market', category: 'scifi', content: 'A bustling, chaotic street market in a futuristic cyberpunk mega-city at night.', image: '', imageSrc: prompt34, tags: ['cyberpunk', 'gritty', 'neon'], upvotes: 1123, createdAt: '2024-01-19' },
+  { id: '35', title: 'Deep Space Hauler', category: 'scifi', content: 'A highly detailed exterior shot of a massive, industrial deep-space mining vessel drifting past the rings of Saturn.', image: '', imageSrc: prompt35, tags: ['hard sci-fi', 'industrial', 'space'], upvotes: 867, createdAt: '2024-01-18' },
+  { id: '36', title: 'Biopunk Laboratory', category: 'scifi', content: 'Inside a cutting-edge biopunk laboratory where organic and mechanical elements merge.', image: '', imageSrc: prompt36, tags: ['biopunk', 'laboratory', 'organic'], upvotes: 756, createdAt: '2024-01-17' },
+  { id: '37', title: 'Retro-Futuristic Space Lounge', category: 'scifi', content: 'A luxurious space lounge in a 1960s retro-futuristic style orbiting Earth.', image: '', imageSrc: prompt37, tags: ['retro-futuristic', 'space', 'lounge'], upvotes: 678, createdAt: '2024-01-16' },
+  { id: '38', title: 'Alien Marketplace', category: 'scifi', content: 'A vibrant, bustling marketplace on an alien planet with diverse extraterrestrial species.', image: '', imageSrc: prompt38, tags: ['alien', 'marketplace', 'diverse'], upvotes: 834, createdAt: '2024-01-15' },
+  { id: '39', title: 'Mech Warrior Arena', category: 'scifi', content: 'A massive gladiatorial arena where giant mechs battle. Crowds of spectators cheer from floating platforms.', image: '', imageSrc: prompt39, tags: ['mech', 'arena', 'action'], upvotes: 945, createdAt: '2024-01-14' },
+  { id: '40', title: 'Quantum Computing Core', category: 'scifi', content: 'The heart of a quantum computing facility with crystalline processors suspended in zero-gravity chambers.', image: '', imageSrc: prompt40, tags: ['quantum', 'computing', 'futuristic'], upvotes: 712, createdAt: '2024-01-13' },
+  { id: '91', title: 'The Neo-Terra City', category: 'scifi', content: 'A wide-angle landscape of a futuristic "solarpunk" city built in harmony with nature. Skyscrapers are constructed from timber, glass, and polished green stone, covered in vertical gardens, cascading waterfalls, and solar panels that look like glass leaves. Airships with sail-like solar wings drift between the towers. Pedestrian bridges connect buildings, filled with people and lush greenery. The city is nestled in a valley with a clear blue river. The lighting is bright and optimistic, with a clear blue sky, conveying a sense of a sustainable, utopian future. 8K resolution, highly detailed architecture.', image: '', imageSrc: prompt91, tags: ['solarpunk', 'utopian', 'sustainable'], upvotes: 1567, createdAt: '2024-01-22' },
+  { id: '92', title: 'The Cyberpunk Street Market', category: 'scifi', content: 'A bustling, chaotic street market in a futuristic cyberpunk mega-city at night. The scene is drenched in neon signs with Japanese and Cyrillic characters reflecting off wet pavement and holographic advertisements advertising cybernetics. Vendors sell strange, glowing street food from stalls built out of recycled tech. Diverse crowds of people with glowing fashion and robotic limbs navigate the mud. Overhead, flying vehicles traverse tight alleyways between towering skyscrapers. 8K resolution, incredibly dense detail, volumetric fog, cinematic lighting.', image: '', imageSrc: prompt92, tags: ['cyberpunk', 'gritty', 'neon'], upvotes: 1345, createdAt: '2024-01-21' },
+  { id: '93', title: 'The Deep Space Hauler', category: 'scifi', content: 'A highly detailed exterior shot of a massive, industrial deep-space mining vessel drifting past the rings of Saturn. The ship is utilitarian, covered in exposed pipes, cargo containers, radar dishes, and scorch marks from micrometeoroids. Its massive engines glow with a soft blue plasma output. The sunlight catches the ice particles in Saturn\'s rings. The scale is immense. 8K resolution, photorealistic render (like Unreal Engine 5), hard sci-fi aesthetic.', image: '', imageSrc: prompt93, tags: ['hard sci-fi', 'industrial', 'space'], upvotes: 1123, createdAt: '2024-01-20' },
+  { id: '94', title: 'The Space Station Observatory', category: 'scifi', content: 'Interior of a futuristic space station observation deck, with a massive curved window showing Earth and the Milky Way. The room is minimalist, with sleek white surfaces, recessed lighting, and holographic displays showing star maps. A lone figure in a sleek spacesuit stands looking out at the view. The lighting is cool and diffused. The style is clean, modern, and high-tech.', image: '', imageSrc: prompt94, tags: ['futuristic', 'minimalist', 'space'], upvotes: 934, createdAt: '2024-01-19' },
+  { id: '95', title: 'The Alien Contact', category: 'scifi', content: 'A dramatic photograph of a first contact scenario on a desolate alien planet. A human exploration team in futuristic spacesuits stands in awe before a massive, crystalline alien structure that is pulsating with light. Strange, non-humanoid alien beings are emerging from the structure. The sky is filled with unfamiliar stars and a nebula. The mood is tense, wondrous, and mysterious.', image: '', imageSrc: prompt95, tags: ['first contact', 'mystery', 'alien'], upvotes: 1456, createdAt: '2024-01-18' },
+  { id: '96', title: 'The Retro-Futuristic City', category: 'scifi', content: 'A stylized landscape of a retro-futuristic city as imagined in the 1950s. Flying cars with tail fins zip between gleaming chrome skyscrapers with domed tops. Monorails run on elevated tracks. People wear bubble helmets and silver jumpsuits. The color palette is bright and optimistic, with pastel blues, oranges, and yellows. The style is like a vintage illustration brought to life.', image: '', imageSrc: prompt96, tags: ['atomic age', 'nostalgia', 'retro'], upvotes: 867, createdAt: '2024-01-17' },
+  { id: '97', title: 'The Cybernetic Surgeon', category: 'scifi', content: 'A detailed photograph of a cybernetic surgeon performing a procedure in a futuristic operating room. The surgeon has robotic arms with integrated surgical tools and wears a headset with a holographic display. The patient is lying on an advanced operating table, surrounded by medical drones and holographic scanners. The room is sterile and high-tech, with cool blue and white lighting.', image: '', imageSrc: prompt97, tags: ['high-tech', 'medical', 'cybernetic'], upvotes: 756, createdAt: '2024-01-16' },
+  { id: '98', title: 'The Post-Human Landscape', category: 'scifi', content: 'A surreal landscape of a world inhabited by post-human beings. The beings are made of energy and light, integrated with organic and inorganic matter. They are existing in a shifting, abstract environment that defies the laws of physics. The colors are vibrant and shifting. The style is abstract, philosophical, and thought-provoking.', image: '', imageSrc: prompt98, tags: ['transhumanism', 'abstract', 'philosophical'], upvotes: 1089, createdAt: '2024-01-15' },
+  { id: '99', title: 'The Galactic Senate', category: 'scifi', content: 'A grand, wide-angle photograph of a galactic senate session in a massive, dome-shaped chamber. Thousands of diverse alien representatives from different species are seated in tiered rows. A large holographic projection of the galaxy floats in the center of the room. The architecture is grand and futuristic. The mood is serious and political.', image: '', imageSrc: prompt99, tags: ['epic', 'political', 'galactic'], upvotes: 1234, createdAt: '2024-01-14' },
+  { id: '100', title: 'The AI Uprising', category: 'scifi', content: 'A dramatic action photograph of an AI uprising in a futuristic city. Rogue robots and androids are clashing with human security forces. Explosions and laser fire fill the streets. A massive, sentient AI core is visible in the background, glowing with a menacing red light. The city is in chaos. The style is gritty, action-packed, and cinematic.', image: '', imageSrc: prompt100, tags: ['dystopian', 'action', 'AI'], upvotes: 1345, createdAt: '2024-01-13' },
 ];
