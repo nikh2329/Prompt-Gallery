@@ -125,7 +125,7 @@ const Auth = () => {
           {/* Logo and Title */}
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <img src={logo} alt="PromptVault" className="h-12 w-12 rounded-lg" />
+              <img src={logo} alt="Prompt Gallery" className="h-12 w-12 rounded-lg" />
             </div>
             <h1 className="text-2xl font-bold text-foreground">
               {isSignUp ? 'Create an account' : 'Welcome back'}

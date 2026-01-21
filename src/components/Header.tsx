@@ -39,8 +39,8 @@ const Header = () => {
     <header className="header-glass sticky top-0 z-50 w-full">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
-          <img src={logo} alt="PromptVault" className="h-9 w-9 rounded-lg" />
-          <span className="text-xl font-bold tracking-tight text-foreground">PromptVault</span>
+          <img src={logo} alt="Prompt Gallery" className="h-9 w-9 rounded-lg" />
+          <span className="text-xl font-bold tracking-tight text-foreground">Prompt Gallery</span>
         </Link>
 
         {/* Desktop Navigation */}
