@@ -1,33 +1,61 @@
-import { categories, type Category } from '@/lib/prompts';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { 
+  Sparkles, 
+  User, 
+  Users, 
+  Heart, 
+  Baby, 
+  Mountain, 
+  Rocket 
+} from 'lucide-react';
+import type { Category } from '@/lib/prompts';
 
 interface CategoryFilterProps {
   activeCategory: Category;
   onCategoryChange: (category: Category) => void;
 }
 
+const categories: { id: Category; label: string; icon: React.ReactNode }[] = [
+  { id: 'all', label: 'All', icon: <Sparkles className="h-4 w-4" /> },
+  { id: 'men', label: 'Men', icon: <User className="h-4 w-4" /> },
+  { id: 'women', label: 'Women', icon: <Users className="h-4 w-4" /> },
+  { id: 'couple', label: 'Couple', icon: <Heart className="h-4 w-4" /> },
+  { id: 'kids', label: 'Kids', icon: <Baby className="h-4 w-4" /> },
+  { id: 'landscapes', label: 'Landscapes', icon: <Mountain className="h-4 w-4" /> },
+  { id: 'scifi', label: 'Sci-Fi', icon: <Rocket className="h-4 w-4" /> },
+];
+
 const CategoryFilter = ({ activeCategory, onCategoryChange }: CategoryFilterProps) => {
   return (
-    <section id="categories" className="border-b border-border/40 bg-background px-4 py-4">
-      <div className="container mx-auto">
-        <div className="scrollbar-hide flex gap-2 overflow-x-auto pb-2">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      id="categories"
+      className="sticky top-16 z-40 border-b border-border bg-background/80 backdrop-blur-xl"
+    >
+      <div className="container mx-auto px-4">
+        <div className="scrollbar-hide flex items-center gap-2 overflow-x-auto py-4">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => onCategoryChange(category.id)}
               className={cn(
-                'flex-shrink-0 rounded-full px-5 py-2 text-sm font-medium transition-all duration-200',
+                'glow-border flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-all',
                 activeCategory === category.id
-                  ? 'bg-primary text-primary-foreground shadow-md'
-                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  ? 'border-primary bg-primary/20 text-primary shadow-glow'
+                  : 'border-border bg-secondary text-muted-foreground hover:border-primary/50 hover:text-foreground'
               )}
             >
+              {category.icon}
               {category.label}
             </button>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

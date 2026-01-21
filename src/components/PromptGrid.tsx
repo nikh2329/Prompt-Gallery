@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import PromptCard from './PromptCard';
 import type { Prompt } from '@/lib/prompts';
 
@@ -31,22 +32,22 @@ const PromptGrid = ({ prompts }: PromptGridProps) => {
   }
 
   return (
-    <section className="px-4 py-8">
+    <section className="px-4 py-12">
       <div className="container mx-auto">
-        <div className="mb-6 flex items-center justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 flex items-center justify-between"
+        >
           <p className="text-sm text-muted-foreground">
             Showing <span className="font-medium text-foreground">{prompts.length}</span> prompts
           </p>
-        </div>
+        </motion.div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {prompts.map((prompt, index) => (
-            <div
-              key={prompt.id}
-              className="animate-slide-up"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <PromptCard prompt={prompt} />
-            </div>
+            <PromptCard key={prompt.id} prompt={prompt} index={index} />
           ))}
         </div>
       </div>
