@@ -1,4 +1,4 @@
-import { Menu, X, LogOut, User } from 'lucide-react';
+import { Menu, X, LogOut, User, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -79,6 +79,10 @@ const Header = () => {
                   </div>
                 </div>
                 <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => navigate('/profile')} className="cursor-pointer">
+                  <Settings className="mr-2 h-4 w-4" />
+                  Profile Settings
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={handleSignOut} className="cursor-pointer text-destructive focus:text-destructive">
                   <LogOut className="mr-2 h-4 w-4" />
                   Sign out
@@ -144,6 +148,17 @@ const Header = () => {
                     </Avatar>
                     <span className="text-sm text-muted-foreground truncate">{user.email}</span>
                   </div>
+                  <Button
+                    variant="ghost"
+                    className="justify-start"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      navigate('/profile');
+                    }}
+                  >
+                    <Settings className="mr-2 h-4 w-4" />
+                    Profile Settings
+                  </Button>
                   <Button
                     variant="ghost"
                     className="justify-start text-destructive hover:text-destructive"
