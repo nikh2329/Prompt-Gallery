@@ -9,8 +9,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="#" className="mb-4 flex items-center gap-2">
-              <img src={logo} alt="PromptVault" className="h-9 w-9 rounded-lg" />
-              <span className="text-xl font-bold text-foreground">PromptVault</span>
+              <img src={logo} alt="Prompt Gallery" className="h-9 w-9 rounded-lg" />
+              <span className="text-xl font-bold text-foreground">Prompt Gallery</span>
             </a>
             <p className="mb-6 max-w-sm text-sm text-muted-foreground">
               Discover and share the best AI prompts for image generation. Curated prompts for Midjourney, DALL·E, Stable Diffusion, and more.
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} PromptVault. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Prompt Gallery. All rights reserved.</p>
         </div>
       </div>
     </footer>
