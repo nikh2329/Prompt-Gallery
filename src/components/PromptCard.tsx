@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Copy, Check, Sparkles } from 'lucide-react';
+import { Copy, Check, Sparkles, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 import PromptLightbox from './PromptLightbox';
+import { useFavoritesContext } from '@/contexts/FavoritesContext';
 import type { Prompt } from '@/lib/prompts';
 
 interface PromptCardProps {
@@ -16,14 +17,14 @@ const categoryColors: Record<string, string> = {
   women: 'bg-pink-500/20 text-pink-400 border-pink-500/30',
   couple: 'bg-rose-500/20 text-rose-400 border-rose-500/30',
   kids: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
-  landscapes: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-  scifi: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
 };
 
 const PromptCard = ({ prompt, index = 0 }: PromptCardProps) => {
   const [copied, setCopied] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const { toast } = useToast();
+  const { isFavorite, toggleFavorite } = useFavoritesContext();
+  const favorited = isFavorite(prompt.id);
 
   const handleCopy = async (e?: React.MouseEvent) => {
     e?.stopPropagation();
@@ -65,7 +66,7 @@ const PromptCard = ({ prompt, index = 0 }: PromptCardProps) => {
 
         {/* Content Area */}
         <div className="flex flex-1 flex-col p-5">
-          {/* Category & Copy Icon Row */}
+          {/* Category & Action Icons Row */}
           <div className="mb-3 flex items-center justify-between">
             <span
               className={cn(
@@ -75,16 +76,32 @@ const PromptCard = ({ prompt, index = 0 }: PromptCardProps) => {
             >
               {prompt.category}
             </span>
-            <button
-              onClick={handleCopy}
-              className="glow-border flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-all hover:text-foreground"
-            >
-              {copied ? (
-                <Check className="h-4 w-4 text-success" />
-              ) : (
-                <Copy className="h-4 w-4" />
-              )}
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleFavorite(prompt.id);
+                }}
+                className={cn(
+                  'flex h-8 w-8 items-center justify-center rounded-full transition-all',
+                  favorited
+                    ? 'bg-favorite/20 text-favorite'
+                    : 'bg-secondary text-muted-foreground hover:text-favorite'
+                )}
+              >
+                <Heart className={cn('h-4 w-4', favorited && 'fill-current')} />
+              </button>
+              <button
+                onClick={handleCopy}
+                className="glow-border flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-all hover:text-foreground"
+              >
+                {copied ? (
+                  <Check className="h-4 w-4 text-success" />
+                ) : (
+                  <Copy className="h-4 w-4" />
+                )}
+              </button>
+            </div>
           </div>
 
           {/* Title */}

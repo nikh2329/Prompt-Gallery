@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Copy, Check, X, ZoomIn, ZoomOut, Sparkles } from 'lucide-react';
+import { Copy, Check, X, ZoomIn, ZoomOut, Sparkles, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
+import { useFavoritesContext } from '@/contexts/FavoritesContext';
 import type { Prompt } from '@/lib/prompts';
 
 interface PromptLightboxProps {
@@ -18,14 +19,13 @@ const categoryColors: Record<string, string> = {
   women: 'bg-pink-500/20 text-pink-400 border-pink-500/30',
   couple: 'bg-rose-500/20 text-rose-400 border-rose-500/30',
   kids: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
-  landscapes: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-  scifi: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
 };
 
 const PromptLightbox = ({ prompt, isOpen, onClose }: PromptLightboxProps) => {
   const [copied, setCopied] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
   const { toast } = useToast();
+  const { isFavorite, toggleFavorite } = useFavoritesContext();
 
   if (!prompt) return null;
 
@@ -156,23 +156,37 @@ const PromptLightbox = ({ prompt, isOpen, onClose }: PromptLightboxProps) => {
               <span>{prompt.upvotes} upvotes</span>
             </div>
 
-            {/* Copy Button */}
-            <button
-              onClick={handleCopy}
-              className="w-full btn-gradient flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-all"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-5 w-5" />
-                  Copied!
-                </>
-              ) : (
-                <>
-                  <Copy className="h-5 w-5" />
-                  Copy Prompt
-                </>
-              )}
-            </button>
+            {/* Action Buttons */}
+            <div className="flex gap-3">
+              <button
+                onClick={() => toggleFavorite(prompt.id)}
+                className={cn(
+                  'flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-all border',
+                  isFavorite(prompt.id)
+                    ? 'bg-favorite/20 text-favorite border-favorite/30'
+                    : 'bg-secondary text-muted-foreground border-border hover:text-favorite'
+                )}
+              >
+                <Heart className={cn('h-5 w-5', isFavorite(prompt.id) && 'fill-current')} />
+                {isFavorite(prompt.id) ? 'Saved' : 'Save'}
+              </button>
+              <button
+                onClick={handleCopy}
+                className="flex-1 btn-gradient flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-all"
+              >
+                {copied ? (
+                  <>
+                    <Check className="h-5 w-5" />
+                    Copied!
+                  </>
+                ) : (
+                  <>
+                    <Copy className="h-5 w-5" />
+                    Copy
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </DialogContent>
