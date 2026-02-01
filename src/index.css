@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hard reset to prevent white screen */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #0f172a; /* dark slate */
+  color: #e5e7eb;           /* light text */
+}
