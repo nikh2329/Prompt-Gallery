@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Camera, User, Save, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -24,14 +24,14 @@ const Profile = () => {
   const [hasChanges, setHasChanges] = useState(false);
 
   // Initialize form when profile loads
-  useState(() => {
+  useEffect(() => {
     if (profile) {
       setDisplayName(profile.display_name || '');
       const prefs = profile.preferences as Record<string, boolean> || {};
       setEmailNotifications(prefs.emailNotifications ?? true);
       setDarkMode(prefs.darkMode ?? false);
     }
-  });
+  }, [profile]);
 
   // Redirect to auth if not logged in
   if (!authLoading && !user) {

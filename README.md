@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# 🎨 Prompt Gallery
 
-## Project info
+> **Discover, share, and copy high-quality AI image generation prompts.**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Prompt Gallery is a modern, responsive, and feature-rich Web Application built on **React, TypeScript, Tailwind CSS, and Supabase**. It provides a beautifully curated space for AI enthusiasts to browse over 180 image prompts, save their favorites, create profiles, and contribute user-generated prompts to the community.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Curated Prompt Gallery**: Browse 180+ stunning AI image prompts categorized by style and subject (e.g., Cyberpunk, Architecture, Couple, Men, Women, Nature, and more).
+- **Interactive Lightbox View**: View full-size high-definition image previews and copy AI prompts directly to your clipboard in a single click.
+- **Robust Authentication**: Fully integrated authentication powered by Supabase Auth (Sign Up, Sign In, and OAuth support).
+- **Personalized Favorites**: Star and save your favorite prompts to a personalized collections tab, persisting directly to your database profile.
+- **Community Contributions**: Create and submit your own prompts to the public feed with custom titles, content, categories, and tags.
+- **Profile Management**: Update your display name, upload custom profile avatars to Supabase Storage, and toggle notifications and system preferences.
+- **Premium User Experience**: Styled with a dark-slate theme, featuring glassmorphism, responsive grids, and micro-interactions powered by Framer Motion and Lucide Icons.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack & Key Libraries
 
-**Use your preferred IDE**
+* **Core**: [React 18](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vite.dev/)
+* **Database & Auth**: [Supabase](https://supabase.com/)
+* **Routing**: [React Router DOM v6](https://reactrouter.com/)
+* **State Management**: React Context, [React Query v5](https://tanstack.com/query/latest)
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/)
+* **UI Components**: [Shadcn UI](https://ui.shadcn.com/) (built on Radix Primitives)
+* **Icons**: [Lucide React](https://lucide.dev/)
+* **Testing**: [Vitest](https://vitest.dev/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📂 Project Structure
 
-Follow these steps:
+```text
+Prompt-Gallery/
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Logo and prompt images
+│   ├── components/         # Reusable UI components & layouts
+│   │   └── ui/             # Shadcn primitive design components
+│   ├── contexts/           # Auth and Favorites React Context providers
+│   ├── hooks/              # Custom hooks (favorites, profile, toast, etc.)
+│   ├── integrations/       # Supabase client configurations and types
+│   ├── lib/                # Shared utilities & hardcoded prompt data (180 prompts)
+│   ├── pages/              # Routed pages (Index, Auth, Favorites, Profile, CreatePrompt)
+│   ├── test/               # Test suites and test setups
+│   ├── App.tsx             # Main router and provider configuration
+│   ├── index.css           # Tailwind base styles and global setup
+│   └── main.tsx            # App entry point
+├── supabase/               # Database migrations and configurations
+│   ├── config.toml         # Supabase CLI configurations
+│   └── migrations/         # PostgreSQL schema files
+├── tailwind.config.ts      # Tailwind CSS configurations
+├── vite.config.ts          # Vite server and plugin configuration
+└── package.json            # NPM dependencies and script settings
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js** (v18+) and **npm** installed on your system.
+
+### 1. Clone & Install Dependencies
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <your-repository-url>
+cd Prompt-Gallery
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install npm dependencies
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 2. Configure Environment Variables
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Create a `.env` file in the root directory and add your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=https://<your-project-ref>.supabase.co
+VITE_SUPABASE_ANON_KEY=<your-anon-key>
+```
+
+### 3. Database Schema setup
+
+Run the SQL migration scripts in your **Supabase Dashboard -> SQL Editor** in the following order:
+
+1. **Profiles Schema**: Run [20260121085617_a5267770-4f44-412e-b178-30532fb57eaf.sql](file:///c:/ProjectWorks/Prompt-Gallery/supabase/migrations/20260121085617_a5267770-4f44-412e-b178-30532fb57eaf.sql)
+   - Creates the `profiles` table.
+   - Attaches a trigger to automatically create profile metadata when a user registers.
+2. **Prompts Schema**: Run [20260622000000_create_prompts_table.sql](file:///c:/ProjectWorks/Prompt-Gallery/supabase/migrations/20260622000000_create_prompts_table.sql)
+   - Creates the `prompts` table for user contributions.
+   - Sets up Row Level Security (RLS) policies for secure reading and writing.
+   - Installs an `auto_confirm_user` database trigger to automatically verify user emails. This bypasses Supabase SMTP rate limits (`over_email_send_rate_limit`) during development.
+
+### 4. Run the Development Server
+
+```sh
+# Run locally (runs on http://localhost:8085/)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 5. Build for Production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+# Build compilation bundle
+npm run build
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Preview production build
+npm run preview
+```

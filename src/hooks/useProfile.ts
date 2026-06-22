@@ -1,136 +1,123 @@
-import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-const supabase = supabase;
-import { useAuth } from '@/contexts/AuthContext';
-import { useToast } from '@/hooks/use-toast';
-import type { Json } from '@/integrations/supabase/types';
-
-export interface Profile {
-  id: string;
-  user_id: string;
-  display_name: string | null;
-  avatar_url: string | null;
-  preferences: Json;
-  created_at: string;
-  updated_at: string;
-}
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/contexts/AuthContext";
+import { useToast } from "@/hooks/use-toast";
 
 export const useProfile = () => {
-  const [profile, setProfile] = useState<Profile | null>(null);
+  const { session } = useAuth();
+  const { toast } = useToast();
+  const [profile, setProfile] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
-  const { user } = useAuth();
-  const { toast } = useToast();
 
-  const fetchProfile = useCallback(async () => {
-    if (!user) {
-      setProfile(null);
-      setLoading(false);
-      return;
-    }
+  useEffect(() => {
+    let mounted = true;
 
+    const getProfile = async () => {
+      try {
+        setLoading(true);
+        if (!session?.user) {
+          if (mounted) {
+            setProfile(null);
+            setLoading(false);
+          }
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', session.user.id)
+          .single();
+
+        if (error) {
+          console.warn('Error loading profile:', error.message);
+        }
+
+        if (mounted && data) {
+          setProfile(data);
+        }
+      } catch (error) {
+        console.error('Error in useProfile:', error);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    };
+
+    getProfile();
+
+    return () => {
+      mounted = false;
+    };
+  }, [session]);
+
+  const updateProfile = async (updates: any) => {
     try {
-      setLoading(true);
-      const { data, error } = await supabase
+      setUpdating(true);
+      if (!session?.user) throw new Error('No user logged in');
+
+      const { error } = await supabase
         .from('profiles')
-        .select('*')
-        .eq('user_id', user.id)
-        .maybeSingle();
+        .upsert({
+          id: session.user.id,
+          ...updates,
+          updated_at: new Date(),
+        });
 
       if (error) throw error;
       
-      setProfile(data as Profile | null);
-    } catch (error) {
-      console.error('Error fetching profile:', error);
-      toast({
-        title: 'Error',
-        description: 'Failed to load profile',
-        variant: 'destructive',
-      });
-    } finally {
-      setLoading(false);
-    }
-  }, [user, toast]);
-
-  useEffect(() => {
-    fetchProfile();
-  }, [fetchProfile]);
-
-  const updateProfile = async (updates: Partial<Pick<Profile, 'display_name' | 'avatar_url'>> & { preferences?: Json }) => {
-    if (!user) return;
-
-    try {
-      setUpdating(true);
-      const { error } = await supabase
-        .from('profiles')
-        .update(updates)
-        .eq('user_id', user.id);
-
-      if (error) throw error;
-
-      setProfile((prev) => prev ? { ...prev, ...updates } : null);
-      toast({
-        title: 'Success',
-        description: 'Profile updated successfully',
-      });
-    } catch (error) {
-      console.error('Error updating profile:', error);
-      toast({
-        title: 'Error',
-        description: 'Failed to update profile',
-        variant: 'destructive',
-      });
-      throw error;
+      // Refresh local state
+      setProfile((prev: any) => ({ ...prev, ...updates }));
+      toast({ title: "Success", description: "Profile updated successfully." });
+      return { error: null };
+    } catch (error: any) {
+      toast({ title: "Error", description: error.message, variant: "destructive" });
+      return { error };
     } finally {
       setUpdating(false);
     }
   };
 
-  const uploadAvatar = async (file: File): Promise<string | null> => {
-    if (!user) return null;
-
+  const uploadAvatar = async (file: File) => {
     try {
       setUpdating(true);
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${user.id}/avatar.${fileExt}`;
+      if (!session?.user) throw new Error('No user logged in');
 
-      // Upload file to storage
+      const fileExt = file.name.split('.').pop();
+      const filePath = `${session.user.id}/avatar.${fileExt}`;
+
+      // Upload to Supabase Storage
       const { error: uploadError } = await supabase.storage
         .from('avatars')
-        .upload(fileName, file, { upsert: true });
+        .upload(filePath, file, { upsert: true });
 
       if (uploadError) throw uploadError;
 
-      // Get public URL
-      const { data } = supabase.storage
+      // Get the public URL
+      const { data: { publicUrl } } = supabase.storage
         .from('avatars')
-        .getPublicUrl(fileName);
+        .getPublicUrl(filePath);
 
-      const avatarUrl = `${data.publicUrl}?t=${Date.now()}`;
+      // Update the profile record
+      const { error: updateError } = await supabase
+        .from('profiles')
+        .upsert({
+          id: session.user.id,
+          avatar_url: publicUrl,
+          updated_at: new Date(),
+        });
 
-      // Update profile with new avatar URL
-      await updateProfile({ avatar_url: avatarUrl });
+      if (updateError) throw updateError;
 
-      return avatarUrl;
-    } catch (error) {
+      setProfile((prev: any) => ({ ...prev, avatar_url: publicUrl }));
+      toast({ title: "Success", description: "Avatar updated successfully." });
+    } catch (error: any) {
       console.error('Error uploading avatar:', error);
-      toast({
-        title: 'Error',
-        description: 'Failed to upload avatar',
-        variant: 'destructive',
-      });
-      return null;
+      toast({ title: "Error", description: error.message || "Could not upload avatar.", variant: "destructive" });
     } finally {
       setUpdating(false);
     }
   };
 
-  return {
-    profile,
-    loading,
-    updating,
-    updateProfile,
-    uploadAvatar,
-    refetch: fetchProfile,
-  };
+  return { profile, loading, updating, updateProfile, uploadAvatar };
 };

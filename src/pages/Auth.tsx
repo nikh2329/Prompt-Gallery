@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 import logo from "@/assets/logo.png";
 
 const Auth = () => {
@@ -15,6 +15,7 @@ const Auth = () => {
   const [loading, setLoading] = useState(false);
   const { signIn, signUp, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,9 +23,16 @@ const Auth = () => {
     const { error } = await signIn(email, password);
     setLoading(false);
     if (error) {
-      toast.error(error.message);
+      toast({
+        title: "Sign In Failed",
+        description: error.message,
+        variant: "destructive",
+      });
     } else {
-      toast.success("Signed in successfully!");
+      toast({
+        title: "Success",
+        description: "Signed in successfully!",
+      });
       navigate("/");
     }
   };
@@ -35,16 +43,27 @@ const Auth = () => {
     const { error } = await signUp(email, password);
     setLoading(false);
     if (error) {
-      toast.error(error.message);
+      toast({
+        title: "Sign Up Failed",
+        description: error.message,
+        variant: "destructive",
+      });
     } else {
-      toast.success("Account created! You can now sign in.");
+      toast({
+        title: "Account Created",
+        description: "Account created! You can now sign in.",
+      });
     }
   };
 
   const handleGoogleSignIn = async () => {
     const { error } = await signInWithGoogle();
     if (error) {
-      toast.error(error.message);
+      toast({
+        title: "OAuth Failed",
+        description: error.message,
+        variant: "destructive",
+      });
     }
   };
 

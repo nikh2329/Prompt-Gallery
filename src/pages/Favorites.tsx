@@ -13,20 +13,20 @@ import { useFavoritesContext } from '@/contexts/FavoritesContext';
 
 const Favorites = () => {
   const { user, loading: authLoading } = useAuth();
-  const { favorites, loading: favoritesLoading } = useFavoritesContext();
+  const { favorites, loading: favoritesLoading, isFavorite } = useFavoritesContext();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const favoritePrompts = useMemo(() => {
     return mockPrompts.filter((prompt) => {
-      const isFavorite = favorites.has(prompt.id);
+      const isFav = isFavorite(prompt.id);
       const matchesCategory = activeCategory === 'all' || prompt.category === activeCategory;
       const matchesSearch =
         searchQuery === '' ||
         prompt.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prompt.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prompt.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      return isFavorite && matchesCategory && matchesSearch;
+      return isFav && matchesCategory && matchesSearch;
     });
   }, [favorites, activeCategory, searchQuery]);
 
@@ -97,7 +97,7 @@ const Favorites = () => {
           <div className="flex items-center justify-center py-20">
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
           </div>
-        ) : favorites.size === 0 ? (
+        ) : favorites.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <div className="mb-4 rounded-full bg-secondary p-4">
               <Heart className="h-8 w-8 text-muted-foreground" />

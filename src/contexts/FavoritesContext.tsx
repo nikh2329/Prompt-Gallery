@@ -1,21 +1,20 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-import { useFavorites } from '@/hooks/useFavorites';
+import { createContext, useContext, ReactNode } from "react";
+import { useFavorites } from "@/hooks/useFavorites";
 
-interface FavoritesContextType {
-  favorites: Set<string>;
+type FavoritesContextType = {
+  favorites: string[];
   loading: boolean;
-  toggleFavorite: (promptId: string) => Promise<void>;
-  isFavorite: (promptId: string) => boolean;
-  refetch: () => Promise<void>;
-}
+  isFavorite: (id: string) => boolean;
+  toggleFavorite: (id: string) => Promise<void>;
+};
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
 export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
-  const favoritesData = useFavorites();
+  const { favorites, loading, isFavorite, toggleFavorite } = useFavorites();
 
   return (
-    <FavoritesContext.Provider value={favoritesData}>
+    <FavoritesContext.Provider value={{ favorites, loading, isFavorite, toggleFavorite }}>
       {children}
     </FavoritesContext.Provider>
   );
@@ -24,7 +23,7 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
 export const useFavoritesContext = () => {
   const context = useContext(FavoritesContext);
   if (context === undefined) {
-    throw new Error('useFavoritesContext must be used within a FavoritesProvider');
+    throw new Error("useFavoritesContext must be used within a FavoritesProvider");
   }
   return context;
 };
